@@ -1,0 +1,57 @@
+textarea {
+    resize: none;
+    box-sizing: border-box;
+}
+
+.message-input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    height: 90px;
+}
+
+.message-input:focus {
+}
+
+textarea{
+}
+
+.quit-btn {
+}
+
+.input-group {
+    display: flex;
+    outline: 10px solid rgba(255, 149, 47, 0.37);
+    margin: 10px 10px 0px;
+}
+
+.chatfeed-wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+}
+
+#chat-panel {
+    outline: 10px solid rgba(255, 149, 47, 0.37);
+    margin: 0px 10px;
+    padding: 0px 10px;
+    height: calc(100% - 175px);
+}
+
+.chat-history {
+    display: block;
+    max-height: none !important;
+    height: 100%;
+
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+}
+
+.chat-history::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}

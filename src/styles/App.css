@@ -1,5 +1,15 @@
 .App {
-  text-align: center;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+}
+
+.App::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
 }
 
 .App-logo {
@@ -28,11 +38,3 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

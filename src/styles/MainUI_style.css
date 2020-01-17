@@ -1,0 +1,20 @@
+.MuiTabs-fixed .MuiTabs-flexContainer {
+    height: 100%;
+    font-weight: 400;
+    font-size: large;
+}
+
+.chatui {
+    height: 100%;
+    overflow-x: hidden;
+
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+}
+
+.chatui::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
