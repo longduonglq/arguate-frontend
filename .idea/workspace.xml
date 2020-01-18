@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChatUI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatUI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EscBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EscBtn.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +113,7 @@
       <workItem from="1579020073791" duration="9967000" />
       <workItem from="1579040840517" duration="3617000" />
       <workItem from="1579047073379" duration="34403000" />
-      <workItem from="1579129671048" duration="57556000" />
+      <workItem from="1579129671048" duration="59100000" />
     </task>
     <task id="LOCAL-00001" summary="backup before redoing the redux part">
       <created>1579277438779</created>
@@ -168,6 +168,10 @@
     </state>
     <state x="144" y="123" width="669" height="766" key="DiffContextDialog/104.1103.1680.1027/43.23.1877.1057@43.23.1877.1057" timestamp="1579277526322" />
     <state x="129" y="120" width="585" height="745" key="DiffContextDialog/41.23.1639.1027@41.23.1639.1027" timestamp="1579321769137" />
+    <state x="345" y="406" key="Github.ShareDialog" timestamp="1579323207561">
+      <screen x="41" y="23" width="1639" height="1027" />
+    </state>
+    <state x="345" y="406" key="Github.ShareDialog/41.23.1639.1027@41.23.1639.1027" timestamp="1579323207561" />
     <state width="827" height="261" key="GridCell.Tab.0.bottom" timestamp="1579128488560">
       <screen x="45" y="23" width="1875" height="1057" />
     </state>

@@ -92,12 +92,14 @@ class EscBtn extends React.Component{
                     escBtnStyle: {backgroundColor: GConfig.Global.buttonColor, color: 'white'},
                     escBtnText: 'Start\n(ESC)'
                 });
+                this.props.setChatState(chatStates.userDisconnect);
                 break;
             case btnState.quit:
                 this.setState({
                     escBtnStyle: {},
                     escBtnText: 'Quit\n(ESC)'
                 });
+                this.props.setChatState(chatStates.isLooking);
                 break;
             case btnState.really:
                 this.setState({
