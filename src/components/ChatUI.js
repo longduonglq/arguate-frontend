@@ -122,7 +122,7 @@ class ChatUI extends React.Component {
                 return (
                     <div style={{fontWeight: 500}}>
                         You are <span style={{color: 'green'}}>connected</span> to
-                        a random user ({displayOpinion(this.props.topic)})
+                        a random user ({displayOpinion(this.props.topic)}). 
                     </div>
                 );
             }
