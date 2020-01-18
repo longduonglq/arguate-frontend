@@ -7,9 +7,6 @@ const initState = {
 };
 
 const setChatState = (state, action) => {
-    if (action.state === chatStates.lookingFailed_USR){
-        console.assert (action.extra !== null, 'looking stopped due to user stop require who argument');
-    }
     return Object.assign({}, state, {
         state: action.state,
         extra: action.extra

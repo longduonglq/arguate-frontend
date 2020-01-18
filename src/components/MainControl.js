@@ -32,7 +32,8 @@ class Control extends React.Component{
     }
 
     handleStartChatClick = () => {
-        GWebsocket.start_chat();
+        //GWebsocket.start_chat();
+        this.props.setChatState(chatStates.isLooking);
         this.props.setCurrentTab(1);
     };
     

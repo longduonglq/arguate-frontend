@@ -3,6 +3,7 @@ import {store} from './index';
 import GConfig from "./GConfig";
 import * as chatAction from './store/actions/ChatState';
 import * as msgAction from './store/actions/MsgState';
+import * as tabAction from './store/actions/Tabs';
 import {chatStates} from './store/actions/types';
 const uuid4 = require('uuid/v4');
 
@@ -144,6 +145,7 @@ class WebsocketService{
             chatStates.lookingSuccess,
             {topic: data['topic'], opinion: data['opinion']}
         ));
+        store.dispatch(tabAction.setActiveTab(1));
     }
 
     no_opponents(data) {
@@ -161,6 +163,7 @@ class WebsocketService{
             store.dispatch(chatAction.setChatState(
                 chatStates.lookingFailed_NOP
             ));
+            store.dispatch(tabAction.setActiveTab(1));
         }
     }
 
@@ -168,13 +171,11 @@ class WebsocketService{
         store.dispatch(chatAction.setChatState(
             chatStates.lookingFailed_SER
         ));
+        store.dispatch(tabAction.setActiveTab(1));
     }
 
     end_chat(data) {
         this.sendJSON({cmd: 'end_chat'});
-        store.dispatch(chatAction.setChatState(
-            chatStates.userDisconnect
-        ));
         store.dispatch(msgAction.setTypingState(false));
     }
     receive_end_chat(data) {
@@ -182,11 +183,13 @@ class WebsocketService{
             chatStates.otherDisconnect
         ));
         store.dispatch(msgAction.setTypingState(false));
+        store.dispatch(tabAction.setActiveTab(1));
     }
     receive_typing_status(data) {
         store.dispatch(msgAction.setTypingState(data['isTyping']));
     }
     receive_msg_from(data) {
+        store.dispatch(tabAction.setActiveTab(1));
         store.dispatch(msgAction.newMsg(1, data['msg']));
     }
 

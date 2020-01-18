@@ -4,7 +4,7 @@ import './styles/index.css';
 import App from './App';
 import {Provider} from 'react-redux';
 import { createStore, combineReducers } from "redux";
-import {devToolsEnhancer} from 'redux-devtools-extension';
+import {devToolsEnhancer, composeWithDevTools} from 'redux-devtools-extension';
 
 import chatReducer from './store/reducers/ChatState';
 import msgReducer from './store/reducers/MsgState';
@@ -22,9 +22,15 @@ function configureStore(){
         tab: tabReducer
     });
 
+    const composerEnhancer = composeWithDevTools({
+        name: `Redux`,
+        realtime: true,
+        trace: true,
+        traceLimit: 25
+    });
     const store = createStore(
         rootReducer,
-        devToolsEnhancer()
+        composerEnhancer()
     );
 
     return store;

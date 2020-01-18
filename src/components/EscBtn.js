@@ -29,6 +29,8 @@ class EscBtn extends React.Component{
         this.handleEscClick = this.handleEscClick.bind(this);
         this.setBtnState = this.setBtnState.bind(this);
         this.handleKeydown = this.handleKeydown.bind(this);
+
+        this.stateSnap = [null, null];
     }
 
     handleEscClick(event){
@@ -64,6 +66,11 @@ class EscBtn extends React.Component{
         if (this.state.escBtnState !== prevState.escBtnState){
             this.setBtnState(this.state.escBtnState);
         }
+
+        if (this.stateSnap[0] === this.props.chatState &&
+            this.stateSnap[1] === prevState.chatState){
+            return;
+        } else this.stateSnap = [this.props.chatState, prevState.chatState];
         if (this.props.chatState !== prevState.chatState){
             switch(this.props.chatState){
                 case chatStates.rest:
@@ -92,14 +99,19 @@ class EscBtn extends React.Component{
                     escBtnStyle: {backgroundColor: GConfig.Global.buttonColor, color: 'white'},
                     escBtnText: 'Start\n(ESC)'
                 });
-                this.props.setChatState(chatStates.userDisconnect);
+                if (this.props.chatState === chatStates.isLooking) {
+                    this.props.setChatState(chatStates.lookingFailed_USR);
+                }
+                else if (this.props.chatState === chatStates.isChatting){
+                    GWebsocket.end_chat();
+                }
                 break;
             case btnState.quit:
                 this.setState({
                     escBtnStyle: {},
                     escBtnText: 'Quit\n(ESC)'
                 });
-                this.props.setChatState(chatStates.isLooking);
+                GWebsocket.start_chat();
                 break;
             case btnState.really:
                 this.setState({

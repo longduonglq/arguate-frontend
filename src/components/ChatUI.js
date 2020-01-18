@@ -1,7 +1,5 @@
 import React from 'react';
 import { ChatFeed, Message } from 'react-chat-ui';
-import PropTypes from 'prop-types';
-import Button from '@material-ui/core/Button';
 import {orange, red} from '@material-ui/core/colors';
 import {connect} from 'react-redux';
 
@@ -39,6 +37,8 @@ class ChatUI extends React.Component {
             displayBottomMsg: false,
             bottomMsg: () => {return <div></div>},
         };
+
+        this.chatStateSnap = null;
     }
 
     componentDidMount() {
@@ -46,8 +46,10 @@ class ChatUI extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
+        if (this.chatStateSnap === this.props.chatState) return;
+        else this.chatStateSnap = this.props.chatState;
         if (this.props.chatState !== prevState.chatState){
-            this.propagateChatState(this.props.state, this.props.chatStateExtra);
+            this.propagateChatState(this.props.chatState, this.props.chatStateExtra);
         }
     }
 
@@ -68,7 +70,8 @@ class ChatUI extends React.Component {
                 this.failed_serverError();
                 break;
             case chatStates.lookingFailed_USR:
-                this.failed_disconnect(this.props.chatStateExtra);
+                GWebsocket.stop_start_chat();
+                this.failed_disconnect('You\'ve');
                 break;
             case chatStates.userDisconnect:
                 this.failed_disconnect('You\'ve');
@@ -77,6 +80,7 @@ class ChatUI extends React.Component {
                 this.failed_disconnect('Other use has');
                 break;
             default:
+                console.log('default switch in propagateChatState');
                 break;
         }
     }
