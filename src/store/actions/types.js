@@ -1,9 +1,3 @@
-export const SET_LOOKING_STATE = 'set-looking-state';
-export const SET_LOOKING_RESULT = 'set-looking-result';
-export const SET_CHATTING_STATE = 'set-chatting-state';
-export const SET_DISCONNECT_INFO = 'set-disconnect-info';
-export const SET_CUR_TOPIC = 'set-cur-topic';
-
 export const NEW_MSG = 'new-msg';
 export const CLEAR_MSG = 'clear-msg';
 export const SET_TYPING_STATE = 'set-typing-state';
@@ -14,3 +8,18 @@ export const DELETE_TOPIC = 'delete-topic';
 export const SET_TOPICS = 'set-topics';
 
 export const SET_ACTIVE_TAB = 'set-active-tab';
+
+export const SET_CHAT_STATE = 'set-chat-state';
+export const chatStates = {
+    rest: 'rest',
+    
+    isLooking: 'is-looking',
+    lookingSuccess: 'looking-success',
+    lookingFailed_NOP: 'looking-failed-no-opponents',
+    lookingFailed_SER: 'looking-failed-server-error',
+    lookingFailed_USR: 'looking-failed-user-stopped',
+    
+    isChatting: 'is-chatting',
+    userDisconnect: 'user-disconnect',
+    otherDisconnect: 'other-disconnect',
+};

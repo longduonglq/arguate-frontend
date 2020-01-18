@@ -6,6 +6,7 @@ import {Diff, diffChars} from 'diff';
 import GConfig from "../GConfig";
 import '../styles/Textarea.css';
 import GWebsocket from "../websocket";
+import {chatStates} from "../store/actions/types";
 
 function isEmptyOrSpaces(str){
     return str === null || str.match(/^\s*$/) !== null;
@@ -42,7 +43,7 @@ class Textarea extends React.Component{
         }
         if (inputValue === '') curRet = false;
         if (curRet !== this.lastReturnValue) {
-            if (this.props.isChatting) {
+            if (this.props.state === chatStates.isChatting) {
                 GWebsocket.send_typing_status(curRet);
             }
             this.lastReturnValue = curRet;
@@ -78,7 +79,7 @@ class Textarea extends React.Component{
                 style={{fontWeight: GConfig.ChatUI.fontWeight}}
                 maxLength={500}
                 autoFocus={true}
-                disabled={!this.props.isChatting}
+                disabled={this.props.state !== chatStates.isChatting}
                 onKeyPress={this.onKeyPress}
                 onChange={this.handleInputChange}
             />
@@ -88,7 +89,7 @@ class Textarea extends React.Component{
 
 const mapStateToProps = (state) => {
     return {
-        isChatting: state.chat.isChatting
+        chatState: state.chat.state,
     };
 };
 

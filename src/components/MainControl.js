@@ -12,6 +12,7 @@ import * as tabAction from '../store/actions/Tabs';
 
 import '../styles/MainUI_style.css';
 import GWebsocket from "../websocket";
+import {chatStates} from "../store/actions/types";
 
 // this is for tooltip styling
 const theme = createMuiTheme({
@@ -25,43 +26,13 @@ const theme = createMuiTheme({
   }
 });
 
-const lookingResult = {
-    success: 'success',
-    failed_noOpponent: 'failed-no-opponents',
-    failed_disconnect: 'failed-disconnect',
-    failed_serverError: 'failed-server-error'
-};
-
 class Control extends React.Component{
     constructor(props) {
         super(props);
     }
 
     handleStartChatClick = () => {
-        this.props.setDisconnectInfo('init');
-        this.props.setLookingResult(null);
-        this.props.setLookingState(true);
-        GWebsocket.start_chat((data, status) => {
-            switch(status) {
-                case 'success':
-                    this.props.setLookingState(false);
-                    this.props.setChattingState(true);
-                    this.props.setLookingResult(lookingResult.success);
-                    break;
-                case 'no-opponents':
-                    this.props.setLookingState(false);
-                    this.props.setChattingState(false);
-                    this.props.setLookingResult(lookingResult.failed_noOpponent);
-                    break;
-                case 'unexpected-error':
-                    this.props.setLookingState(false);
-                    this.props.setChattingState(false);
-                    this.props.setLookingResult(lookingResult.failed_serverError);
-                    break;
-                default:
-                    break;
-            }
-        });
+        GWebsocket.start_chat();
         this.props.setCurrentTab(1);
     };
     
@@ -108,11 +79,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        setLookingState: (state) => dispatch(chatAction.setLookingState(state)),
-        setLookingResult: (result, extra) => dispatch(chatAction.setLookingResult(result, extra)),
         setCurrentTab: (tab) => dispatch(tabAction.setActiveTab(tab)),
-        setChattingState: (state) => dispatch(chatAction.setChattingState(state)),
-        setDisconnectInfo: (info) => dispatch(chatAction.setDisconnectInfo(info))
+        setChatState: (state) => dispatch(chatAction.setChatState(state)),
     }
 };
 

@@ -2,61 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ChatUI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/EscBtn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Feedback.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MainControl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MainUI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SearchBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Textarea.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TopicsUI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/WelcomeMsg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logo64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/logo256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/logo64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/ChatState.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/MsgState.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/Tabs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/TopicState.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/types.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/ChatState.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/MsgState.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/Tabs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/TopicState.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/ChatUI.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/MainUI_style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/Textarea.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utility.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/websocket.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/wsConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChatUI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatUI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EscBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EscBtn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainControl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Textarea.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Textarea.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/ChatState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/ChatState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/ChatState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/ChatState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/websocket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/websocket.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -147,21 +120,60 @@
       <workItem from="1579020073791" duration="9967000" />
       <workItem from="1579040840517" duration="3617000" />
       <workItem from="1579047073379" duration="34403000" />
-      <workItem from="1579129671048" duration="45249000" />
+      <workItem from="1579129671048" duration="56432000" />
     </task>
+    <task id="LOCAL-00001" summary="backup before redoing the redux part">
+      <created>1579277438779</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579277438779</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="backup before redoing the redux part" />
+    <option name="LAST_COMMIT_MESSAGE" value="backup before redoing the redux part" />
   </component>
   <component name="WindowStateProjectService">
     <state x="80" y="190" key="#ESLint" timestamp="1579129396216">
       <screen x="45" y="23" width="1875" height="1057" />
     </state>
     <state x="80" y="190" key="#ESLint/104.1103.1680.1027/45.23.1875.1057@45.23.1875.1057" timestamp="1579129396216" />
+    <state x="89" y="108" key="CommitChangelistDialog2" timestamp="1579277438243">
+      <screen x="43" y="23" width="1877" height="1057" />
+    </state>
+    <state x="89" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/43.23.1877.1057@43.23.1877.1057" timestamp="1579277438243" />
+    <state x="144" y="123" width="669" height="766" key="DiffContextDialog" timestamp="1579277526322">
+      <screen x="43" y="23" width="1877" height="1057" />
+    </state>
+    <state x="144" y="123" width="669" height="766" key="DiffContextDialog/104.1103.1680.1027/43.23.1877.1057@43.23.1877.1057" timestamp="1579277526322" />
     <state width="827" height="261" key="GridCell.Tab.0.bottom" timestamp="1579128488560">
       <screen x="45" y="23" width="1875" height="1057" />
     </state>
@@ -186,13 +198,15 @@
       <screen x="41" y="23" width="1879" height="1057" />
     </state>
     <state x="281" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/104.1103.1680.1027/41.23.1879.1057@41.23.1879.1057" timestamp="1579019659382" />
-    <state x="816" y="77" width="660" height="946" key="dock-window-1" timestamp="1579276009295">
-      <screen x="43" y="23" width="1877" height="1057" />
+    <state x="862" y="23" width="660" height="946" key="dock-window-1" timestamp="1579304154979">
+      <screen x="41" y="23" width="1639" height="1027" />
     </state>
-    <state x="753" y="115" width="668" height="946" key="dock-window-1/104.1103.1680.1027/42.23.1878.1057@42.23.1878.1057" timestamp="1579039063449" />
-    <state x="816" y="77" width="660" height="946" key="dock-window-1/104.1103.1680.1027/43.23.1877.1057@43.23.1877.1057" timestamp="1579276009295" />
+    <state x="926" y="45" width="660" height="946" key="dock-window-1/104.1103.1680.1027/42.23.1878.1057@42.23.1878.1057" timestamp="1579292710416" />
+    <state x="816" y="77" width="660" height="946" key="dock-window-1/104.1103.1680.1027/43.23.1877.1057@43.23.1877.1057" timestamp="1579288393564" />
     <state x="816" y="77" width="660" height="946" key="dock-window-1/104.1103.1680.1027/44.23.1876.1057@44.23.1876.1057" timestamp="1579254185738" />
     <state x="862" y="38" width="660" height="946" key="dock-window-1/104.1103.1680.1027/45.23.1875.1057@45.23.1875.1057" timestamp="1579187507559" />
+    <state x="862" y="23" width="660" height="946" key="dock-window-1/41.23.1639.1027@41.23.1639.1027" timestamp="1579304154979" />
+    <state x="862" y="23" width="660" height="946" key="dock-window-1/42.23.1638.1027@42.23.1638.1027" timestamp="1579288094432" />
     <state x="862" y="23" width="660" height="946" key="dock-window-1/43.23.1637.1027@43.23.1637.1027" timestamp="1579232389866" />
     <state x="862" y="23" width="660" height="946" key="dock-window-1/44.23.1636.1027@44.23.1636.1027" timestamp="1579111507324" />
     <state x="144" y="235" width="670" height="676" key="search.everywhere.popup" timestamp="1579074209818">

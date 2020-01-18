@@ -12,6 +12,7 @@ import Feedback from "./Feedback";
 import GWebsocket from "../websocket";
 import Textarea from "./Textarea";
 import EscBtn from "./EscBtn";
+import {chatStates} from "../store/actions/types";
 
 import '../styles/ChatUI.css';
 import '../styles/MainUI_style.css';
@@ -28,19 +29,6 @@ var bubbleStyles = {
     }
 };
 
-export const lookingResult = {
-    success: 'success',
-    failed_noOpponent: 'failed-no-opponents',
-    failed_disconnect: 'failed-disconnect',
-    failed_serverError: 'failed-server-error'
-};
-
-export const disconnectInfo = {
-    init: 'init', //not really disconnected
-    other: 'other',
-    user: 'user'
-};
-
 var empty  = () => {return <div></div>};
 class ChatUI extends React.Component {
     constructor(props) {
@@ -54,61 +42,42 @@ class ChatUI extends React.Component {
     }
 
     componentDidMount() {
-        if (this.props.isLooking) {
-                this.isLooking();
-            } else {
-                switch (this.props.lookingResult) {
-                    case lookingResult.success:
-                        this.lookingSuccess();
-                        break;
-                    case lookingResult.failed_noOpponent:
-                        this.failed_noOpponent();
-                        break;
-                    case lookingResult.failed_disconnect:
-                        this.failed_disconnect();
-                        break;
-                    case lookingResult.failed_serverError:
-                        this.failed_serverError();
-                        break;
-                    default:
-                        break;
-                }
-        }
+         this.propagateChatState(this.props.chatState);
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if (this.props.isLooking !== prevProps.isLooking 
-            || this.props.lookingResult !== prevProps.lookingResult) {
-            if (this.props.isLooking) {
-                this.isLooking();
-            } else {
-                switch (this.props.lookingResult) {
-                    case lookingResult.success:
-                        this.lookingSuccess();
-                        break;
-                    case lookingResult.failed_noOpponent:
-                        this.failed_noOpponent();
-                        break;
-                    case lookingResult.failed_disconnect:
-                        this.failed_disconnect('You\'ve');
-                        break;
-                    case lookingResult.failed_serverError:
-                        this.failed_serverError();
-                        break;
-                    default:
-                        break;
-                }
-            }
+        if (this.props.chatState !== prevState.chatState){
+            this.propagateChatState(this.props.state, this.props.chatStateExtra);
         }
-        if (this.props.isChatting !== prevProps.isChatting
-            || this.props.disconnectInfo !== prevProps.disconnectInfo){
-            if (!this.props.isChatting && this.props.disconnectInfo !== disconnectInfo.init){
-                if (this.props.disconnectInfo === disconnectInfo.user){
-                    this.failed_disconnect('You\'ve');
-                } else if (this.props.disconnectInfo === disconnectInfo.other){
-                    this.failed_disconnect('Other user has');
-                }
-            }
+    }
+
+    propagateChatState(state, extra=null){
+        switch (state){
+            case chatStates.rest:
+                break;
+            case chatStates.isLooking:
+                this.isLooking();
+                break;
+            case chatStates.lookingSuccess:
+                this.lookingSuccess();
+                break;
+            case chatStates.lookingFailed_NOP:
+                this.failed_noOpponent();
+                break;
+            case chatStates.lookingFailed_SER:
+                this.failed_serverError();
+                break;
+            case chatStates.lookingFailed_USR:
+                this.failed_disconnect(this.props.chatStateExtra);
+                break;
+            case chatStates.userDisconnect:
+                this.failed_disconnect('You\'ve');
+                break;
+            case chatStates.otherDisconnect:
+                this.failed_disconnect('Other use has');
+                break;
+            default:
+                break;
         }
     }
 
@@ -255,12 +224,8 @@ const mapStateToProps = state => {
     return {
         messages: state.msg.msgs,
         isTyping: state.msg.typingState,
-        isLooking: state.chat.isLooking,
-        lookingResult: state.chat.lookingResult,
-        resultExtra: state.chat.resultExtra,
-        isChatting: state.chat.isChatting,
-        disconnectInfo: state.chat.disconnectInfo,
-        topic: state.chat.curTopic
+        chatState: state.chat.state,
+        chatStateExtra: state.chat.extra,
     }
 };
 

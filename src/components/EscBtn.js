@@ -3,23 +3,16 @@ import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import GConfig from "../GConfig";
 import * as chatAction from '../store/actions/ChatState';
-import {setLookingState} from "../store/actions/ChatState";
 import {connect} from 'react-redux';
 
 import '../styles/ChatUI.css';
 import GWebsocket from "../websocket";
+import {chatStates} from '../store/actions/types';
 
 export const btnState = {
     start: 0,
     quit: 1,
     really: 2
-};
-
-const lookingResult = {
-    success: 'success',
-    failed_noOpponent: 'failed-no-opponents',
-    failed_disconnect: 'failed-disconnect',
-    failed_serverError: 'failed-server-error'
 };
 
 class EscBtn extends React.Component{
@@ -44,16 +37,49 @@ class EscBtn extends React.Component{
         });
     }
 
+    componentDidMount() {
+        document.addEventListener('keydown', this.handleKeydown, false);
+        switch (this.props.chatState){
+            case chatStates.rest:
+                break;
+            case chatStates.isLooking:
+                this.setState({escBtnState: btnState.quit});
+                break;
+            case chatStates.lookingFailed_NOP:
+            case chatStates.lookingFailed_SER:
+            case chatStates.lookingFailed_USR:
+                this.setState({escBtnState: btnState.start});
+                break;
+            case chatStates.userDisconnect:
+            case chatStates.otherDisconnect:
+                this.setState({escBtnState: btnState.start});
+                break;
+        }
+    }
+    componentWillUnmount() {
+        document.removeEventListener('keydown', this.handleKeydown, false);
+    }
+
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.state.escBtnState !== prevState.escBtnState){
             this.setBtnState(this.state.escBtnState);
         }
-        if (this.props.isChatting !== prevProps.isChatting ||
-            this.props.isLooking !== prevProps.isLooking) {
-            if (this.props.isLooking || this.props.isChatting)
-                this.setState({escBtnState: btnState.quit});
-            else {
-                this.setState({escBtnState: btnState.start});
+        if (this.props.chatState !== prevState.chatState){
+            switch(this.props.chatState){
+                case chatStates.rest:
+                    break;
+                case chatStates.isLooking:
+                    this.setState({escBtnState: btnState.quit});
+                    break;
+                case chatStates.lookingFailed_NOP:
+                case chatStates.lookingFailed_SER:
+                case chatStates.lookingFailed_USR:
+                    this.setState({escBtnState: btnState.start});
+                    break;
+                case chatStates.userDisconnect:
+                case chatStates.otherDisconnect:
+                    this.setState({escBtnState: btnState.start});
+                    break;
             }
         }
     }
@@ -66,49 +92,12 @@ class EscBtn extends React.Component{
                     escBtnStyle: {backgroundColor: GConfig.Global.buttonColor, color: 'white'},
                     escBtnText: 'Start\n(ESC)'
                 });
-                // user just press quit
-                if (this.props.isLooking) {
-                    this.props.setLookingState(false);
-                    this.props.setDisconnectInfo('user');
-                    GWebsocket.stop_start_chat();
-                }
-                if (this.props.isChatting) {
-                    this.props.setChattingState(false);
-                    this.props.setDisconnectInfo('user');
-                    GWebsocket.end_chat();
-                }
                 break;
             case btnState.quit:
                 this.setState({
                     escBtnStyle: {},
                     escBtnText: 'Quit\n(ESC)'
                 });
-                this.props.setDisconnectInfo('init');
-                this.props.setLookingResult(null);
-                if (!this.props.isLooking) {
-                    this.props.setLookingState(true);
-                    GWebsocket.start_chat((data, status) => {
-                        switch(status) {
-                            case 'success':
-                                this.props.setLookingState(false);
-                                this.props.setChattingState(true);
-                                this.props.setLookingResult(lookingResult.success);
-                                break;
-                            case 'no-opponents':
-                                this.props.setLookingState(false);
-                                this.props.setChattingState(false);
-                                this.props.setLookingResult(lookingResult.failed_noOpponent);
-                                break;
-                            case 'unexpected-error':
-                                this.props.setLookingState(false);
-                                this.props.setChattingState(false);
-                                this.props.setLookingResult(lookingResult.failed_serverError);
-                                break;
-                            default:
-                                break;
-                        }
-                    });
-                }
                 break;
             case btnState.really:
                 this.setState({
@@ -123,17 +112,6 @@ class EscBtn extends React.Component{
 
     handleKeydown(event){
         if (event.keyCode === 27) this.handleEscClick();
-    }
-
-    componentDidMount() {
-        document.addEventListener('keydown', this.handleKeydown, false);
-        var initState = null;
-        if (this.props.isLooking || this.props.isChatting) initState = btnState.quit;
-        else if (!this.props.isLooking) initState = btnState.start;
-        this.setState({escBtnState: initState});
-    }
-    componentWillUnmount() {
-        document.removeEventListener('keydown', this.handleKeydown, false);
     }
 
     render() {
@@ -153,17 +131,14 @@ class EscBtn extends React.Component{
 
 const mapStateToProps = state => {
     return {
-        isLooking: state.chat.isLooking,
-        isChatting: state.chat.isChatting,
+        chatState: state.chat.state,
+        chatStateExtra: state.chat.extra
     }
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        setChattingState: (state) => dispatch(chatAction.setChattingState(state)),
-        setLookingState: (state) => dispatch(chatAction.setLookingState(state)),
-        setLookingResult: (result, extra) => dispatch(chatAction.setLookingResult(result, extra)),
-        setDisconnectInfo: (info) => dispatch(chatAction.setDisconnectInfo(info))
+        setChatState: (state, extra) => dispatch(chatAction.setChatState(state, extra)),
     };
 };
 

@@ -3,8 +3,7 @@ import {store} from './index';
 import GConfig from "./GConfig";
 import * as chatAction from './store/actions/ChatState';
 import * as msgAction from './store/actions/MsgState';
-import {lookingResult} from "./components/ChatUI";
-
+import {chatStates} from './store/actions/types';
 const uuid4 = require('uuid/v4');
 
 var nullFunc = () => {};
@@ -38,11 +37,8 @@ class WebsocketService{
     constructor() {
         this.socketRef = null;
 
-        this.start_chat_callback = nullFunc;
         this.start_chat_timeouts = [];
         this.start_chat_attempts = 0;
-        
-        this.user_id_callback = nullFunc;
     }
 
     connect() {
@@ -72,10 +68,6 @@ class WebsocketService{
         };
         this.socketRef.onclose = () => {
             console.log("websocket closed, reopening");
-            store.dispatch(chatAction.setLookingState(false));
-            store.dispatch(chatAction.setLookingResult(lookingResult.failed_serverError));
-            store.dispatch(chatAction.setChattingState(false));
-            store.dispatch(chatAction.setDisconnectInfo('init'));
             this.connect();
         };
         this.wait_for_connection();
@@ -119,26 +111,26 @@ class WebsocketService{
         }
     }
 
-    start_chat(callback=nullFunc){
+    start_chat(){
         for (let i = 0; i < this.start_chat_timeouts.length; i++){
             clearTimeout(this.start_chat_timeouts[i]);
         }
-        this.start_chat_callback = callback;
         this.start_chat_timeouts = [];
         this.start_chat_attempts = 0;
 
         this.sendJSON({
             cmd: 'start_chat'
         });
+        store.dispatch(chatAction.setChatState(chatStates.isLooking));
     }
 
     stop_start_chat( ) {
        for (let i = 0; i < this.start_chat_timeouts.length; i++){
             clearTimeout(this.start_chat_timeouts[i]);
        }
-       this.start_chat_callback = nullFunc;
        this.start_chat_timeouts = [];
        this.start_chat_attempts = 0;
+       store.dispatch(chatAction.setChatState(chatStates.lookingFailed_USR));
     }
 
     start_chat_success(data){
@@ -146,8 +138,12 @@ class WebsocketService{
             clearTimeout(this.start_chat_timeouts[i]);
         }
         this.start_chat_timeouts = [];
-        store.dispatch(chatAction.setCurTopic(data['topic'], data['opinion']));
-        this.start_chat_callback(data, 'success');
+        this.start_chat_attempts = 0;
+
+        store.dispatch(chatAction.setChatState(
+            chatStates.lookingSuccess,
+            {topic: data['topic'], opinion: data['opinion']}
+        ));
     }
 
     no_opponents(data) {
@@ -162,23 +158,30 @@ class WebsocketService{
                 }, arr[this.start_chat_attempts] * 1000)
             );
         } else {
-            this.start_chat_callback(data, 'no-opponents');
+            store.dispatch(chatAction.setChatState(
+                chatStates.lookingFailed_NOP
+            ));
         }
     }
 
     could_not_start(data) {
-        this.start_chat_callback(data, 'unexpected-error');
+        store.dispatch(chatAction.setChatState(
+            chatStates.lookingFailed_SER
+        ));
     }
 
     end_chat(data) {
         this.sendJSON({cmd: 'end_chat'});
-        store.dispatch(chatAction.setChattingState(false));
+        store.dispatch(chatAction.setChatState(
+            chatStates.userDisconnect
+        ));
         store.dispatch(msgAction.setTypingState(false));
     }
     receive_end_chat(data) {
-        store.dispatch(chatAction.setChattingState(false));
+        store.dispatch(chatAction.setChatState(
+            chatStates.otherDisconnect
+        ));
         store.dispatch(msgAction.setTypingState(false));
-        store.dispatch(chatAction.setDisconnectInfo('other'));
     }
     receive_typing_status(data) {
         store.dispatch(msgAction.setTypingState(data['isTyping']));
