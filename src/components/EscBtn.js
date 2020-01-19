@@ -1,12 +1,10 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import PropTypes from 'prop-types';
 import GConfig from "../GConfig";
 import * as chatAction from '../store/actions/ChatState';
 import {connect} from 'react-redux';
 
 import '../styles/ChatUI.css';
-import GWebsocket from "../websocket";
 import {chatStates} from '../store/actions/types';
 
 export const btnState = {
@@ -103,15 +101,16 @@ class EscBtn extends React.Component{
                     this.props.setChatState(chatStates.lookingFailed_USR);
                 }
                 else if (this.props.chatState === chatStates.isChatting){
-                    GWebsocket.end_chat();
+                    this.props.setChatState(chatStates.userDisconnect);
                 }
+                console.log('escBtn: someone disconnected');
                 break;
             case btnState.quit:
                 this.setState({
                     escBtnStyle: {},
                     escBtnText: 'Quit\n(ESC)'
                 });
-                GWebsocket.start_chat();
+                this.props.setChatState(chatStates.isLooking);
                 break;
             case btnState.really:
                 this.setState({

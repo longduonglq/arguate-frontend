@@ -11,6 +11,7 @@ import msgReducer from './store/reducers/MsgState';
 import topicReducer from './store/reducers/TopicState';
 import tabReducer from './store/reducers/Tabs';
 import GWebsocket from "./websocket";
+import rdWebsocket from "./rdWebsocket";
 import sendHttp from "./utility";
 import {setTopics} from "./store/actions/TopicState";
 
@@ -52,3 +53,4 @@ GWebsocket.addCallback('user_id_confirmed', () => {
     });
 });
 GWebsocket.connect();
+const rdws = new rdWebsocket();

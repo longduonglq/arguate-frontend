@@ -5,9 +5,9 @@ import {connect} from 'react-redux';
 
 import GConfig from "../GConfig";
 import * as msgAction from '../store/actions/MsgState';
+import * as chatAction from '../store/actions/ChatState';
 import TopicsUI from "./TopicsUI";
 import Feedback from "./Feedback";
-import GWebsocket from "../websocket";
 import Textarea from "./Textarea";
 import EscBtn from "./EscBtn";
 import {chatStates} from "../store/actions/types";
@@ -70,7 +70,6 @@ class ChatUI extends React.Component {
                 this.failed_serverError();
                 break;
             case chatStates.lookingFailed_USR:
-                GWebsocket.stop_start_chat();
                 this.failed_disconnect('You\'ve');
                 break;
             case chatStates.userDisconnect:
@@ -104,17 +103,19 @@ class ChatUI extends React.Component {
     };
 
     lookingSuccess = () => {
+        console.log('looking seccess called');
         function displayOpinion(props){
-            if (!props[1]){
+            console.log('opinion', props);
+            if (!props.opinion){
                 return (
                     <span style={{color:'red', fontWeight: 500}}>Against:
-                        <span style={{color:'red', fontWeight: 600}}> {props[0]}</span>
+                        <span style={{color:'red', fontWeight: 600}}> {props.topic}</span>
                     </span>
                 );
             } else {
                 return (
                     <span style={{color:'green', fontWeight: 500}}>Support:
-                        <span style={{color:'green', fontWeight: 600}}> {props[0]}</span>
+                        <span style={{color:'green', fontWeight: 600}}> {props.topic}</span>
                     </span>
                 );
             }
@@ -126,15 +127,15 @@ class ChatUI extends React.Component {
                 return (
                     <div style={{fontWeight: 500}}>
                         You are <span style={{color: 'green'}}>connected</span> to
-                        a random user ({displayOpinion(this.props.topic)}). 
+                        a random user ({displayOpinion(this.props.chatStateExtra)}).
                     </div>
                 );
             }
-        });
+        }, () => {this.props.setChatState(chatStates.isChatting, this.props.chatStateExtra)});
     };
 
     failed_noOpponent = () => {
-        GWebsocket.end_chat();
+        this.props.setChatState(chatStates.lookingFailed_NOP);
         this.setState({
             displayBottomMsg: true,
             bottomMsg: () => {return(
@@ -236,7 +237,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         newMsg: (msg) => dispatch(msgAction.newMsg(msg)),
-        clearMsg: () => dispatch(msgAction.clearMsg())
+        clearMsg: () => dispatch(msgAction.clearMsg()),
+        setChatState: (state, extra) => dispatch(chatAction.setChatState(state, extra))
     }
 };
 

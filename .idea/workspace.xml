@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="">
+    <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="backup before redoing websocket part">
+      <change afterPath="$PROJECT_DIR$/src/rdWebsocket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ChatUI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatUI.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/EscBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EscBtn.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainControl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Textarea.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Textarea.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/reducers/ChatState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/ChatState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/Tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/Tabs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/websocket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/websocket.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +122,7 @@
       <workItem from="1579040840517" duration="3617000" />
       <workItem from="1579047073379" duration="34403000" />
       <workItem from="1579129671048" duration="65208000" />
-      <workItem from="1579337521213" duration="2473000" />
+      <workItem from="1579337521213" duration="19837000" />
     </task>
     <task id="LOCAL-00001" summary="backup before redoing the redux part">
       <created>1579277438779</created>
@@ -130,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579277438779</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="backup before redoing websocket part">
+      <created>1579341268763</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579341268763</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,17 +170,20 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="backup before redoing the redux part" />
-    <option name="LAST_COMMIT_MESSAGE" value="backup before redoing the redux part" />
+    <MESSAGE value="backup before redoing websocket part" />
+    <option name="LAST_COMMIT_MESSAGE" value="backup before redoing websocket part" />
   </component>
   <component name="WindowStateProjectService">
     <state x="80" y="190" key="#ESLint" timestamp="1579129396216">
       <screen x="45" y="23" width="1875" height="1057" />
     </state>
     <state x="80" y="190" key="#ESLint/104.1103.1680.1027/45.23.1875.1057@45.23.1875.1057" timestamp="1579129396216" />
-    <state x="89" y="108" key="CommitChangelistDialog2" timestamp="1579277438243">
-      <screen x="43" y="23" width="1877" height="1057" />
+    <state x="84" y="108" key="CommitChangelistDialog2" timestamp="1579411615334">
+      <screen x="38" y="23" width="1882" height="1057" />
     </state>
+    <state x="84" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/38.23.1882.1057@38.23.1882.1057" timestamp="1579411615334" />
     <state x="89" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/43.23.1877.1057@43.23.1877.1057" timestamp="1579277438243" />
+    <state x="80" y="106" key="CommitChangelistDialog2/40.23.1640.1027@40.23.1640.1027" timestamp="1579341267887" />
     <state x="129" y="120" width="585" height="745" key="DiffContextDialog" timestamp="1579321769137">
       <screen x="41" y="23" width="1639" height="1027" />
     </state>
@@ -258,9 +269,15 @@
       <screen x="41" y="23" width="1879" height="1057" />
     </state>
     <state x="281" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/104.1103.1680.1027/41.23.1879.1057@41.23.1879.1057" timestamp="1579019659382" />
-    <state x="862" y="23" width="661" height="946" key="dock-window-1" timestamp="1579337600324">
-      <screen x="40" y="23" width="1640" height="1027" />
+    <state x="914" y="37" width="661" height="946" key="dock-window-1" timestamp="1579463317961">
+      <screen x="37" y="23" width="1883" height="1057" />
     </state>
+    <state x="821" y="95" width="661" height="946" key="dock-window-1/104.1103.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1579403177155" />
+    <state x="917" y="1124" width="661" height="946" key="dock-window-1/104.1103.1680.1027/0.23.1920.1057@104.1103.1680.1027" timestamp="1579403124974" />
+    <state x="914" y="37" width="661" height="946" key="dock-window-1/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579463317961" />
+    <state x="821" y="95" width="661" height="946" key="dock-window-1/104.1103.1680.1027/38.23.1882.1057@38.23.1882.1057" timestamp="1579413400134" />
+    <state x="917" y="1124" width="661" height="946" key="dock-window-1/104.1103.1680.1027/41.23.1879.1057@104.1103.1680.1027" timestamp="1579373728530" />
+    <state x="862" y="53" width="661" height="946" key="dock-window-1/104.1103.1680.1027/41.23.1879.1057@41.23.1879.1057" timestamp="1579364587182" />
     <state x="926" y="45" width="660" height="946" key="dock-window-1/104.1103.1680.1027/42.23.1878.1057@42.23.1878.1057" timestamp="1579292710416" />
     <state x="816" y="77" width="660" height="946" key="dock-window-1/104.1103.1680.1027/43.23.1877.1057@43.23.1877.1057" timestamp="1579288393564" />
     <state x="816" y="77" width="660" height="946" key="dock-window-1/104.1103.1680.1027/44.23.1876.1057@44.23.1876.1057" timestamp="1579254185738" />
@@ -270,9 +287,11 @@
     <state x="862" y="23" width="660" height="946" key="dock-window-1/42.23.1638.1027@42.23.1638.1027" timestamp="1579288094432" />
     <state x="862" y="23" width="660" height="946" key="dock-window-1/43.23.1637.1027@43.23.1637.1027" timestamp="1579232389866" />
     <state x="862" y="23" width="660" height="946" key="dock-window-1/44.23.1636.1027@44.23.1636.1027" timestamp="1579111507324" />
-    <state x="144" y="235" width="670" height="676" key="search.everywhere.popup" timestamp="1579074209818">
-      <screen x="45" y="23" width="1875" height="1057" />
+    <state x="193" y="1309" width="687" height="657" key="search.everywhere.popup" timestamp="1579365328166">
+      <screen x="104" y="1103" width="1680" height="1027" />
     </state>
+    <state x="193" y="1309" width="687" height="657" key="search.everywhere.popup/104.1103.1680.1027/41.23.1879.1057@104.1103.1680.1027" timestamp="1579365328166" />
     <state x="144" y="235" width="670" height="676" key="search.everywhere.popup/104.1103.1680.1027/45.23.1875.1057@45.23.1875.1057" timestamp="1579074209818" />
+    <state x="127" y="229" width="670" height="657" key="search.everywhere.popup/40.23.1640.1027@40.23.1640.1027" timestamp="1579361082113" />
   </component>
 </project>

@@ -5,6 +5,7 @@ const initState = {
 };
 
 const setActiveTab = (state, action) => {
+    if (state.tab === action.tab) return state;
     return Object.assign({}, state, {
         tab: action.tab
     });

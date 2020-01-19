@@ -43,7 +43,7 @@ class Textarea extends React.Component{
         }
         if (inputValue === '') curRet = false;
         if (curRet !== this.lastReturnValue) {
-            if (this.props.state === chatStates.isChatting) {
+            if (this.props.chatState === chatStates.isChatting) {
                 GWebsocket.send_typing_status(curRet);
             }
             this.lastReturnValue = curRet;
@@ -79,7 +79,7 @@ class Textarea extends React.Component{
                 style={{fontWeight: GConfig.ChatUI.fontWeight}}
                 maxLength={500}
                 autoFocus={true}
-                disabled={this.props.state !== chatStates.isChatting}
+                disabled={this.props.chatState !== chatStates.isChatting}
                 onKeyPress={this.onKeyPress}
                 onChange={this.handleInputChange}
             />

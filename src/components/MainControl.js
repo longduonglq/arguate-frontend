@@ -11,7 +11,6 @@ import * as chatAction from '../store/actions/ChatState';
 import * as tabAction from '../store/actions/Tabs';
 
 import '../styles/MainUI_style.css';
-import GWebsocket from "../websocket";
 import {chatStates} from "../store/actions/types";
 
 // this is for tooltip styling

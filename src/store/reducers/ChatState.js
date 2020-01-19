@@ -9,7 +9,7 @@ const initState = {
 const setChatState = (state, action) => {
     return Object.assign({}, state, {
         state: action.state,
-        extra: action.extra
+        extra: action.extra === null? state.extra : action.extra
     });
 };
 

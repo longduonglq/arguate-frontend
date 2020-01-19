@@ -39,7 +39,7 @@ class WebsocketService{
         this.socketRef = null;
 
         this.start_chat_timeouts = [];
-        this.start_chat_attempts = 0;
+        this.start_chat_attempts = 1;
     }
 
     connect() {
@@ -90,7 +90,7 @@ class WebsocketService{
     sendJSON(data) {
         try {
             this.socketRef.send(JSON.stringify({...data}));
-            console.log(data);
+            console.log('data send: ', data);
         } catch (err) {
             console.log(err.message, data);
         }
@@ -117,12 +117,11 @@ class WebsocketService{
             clearTimeout(this.start_chat_timeouts[i]);
         }
         this.start_chat_timeouts = [];
-        this.start_chat_attempts = 0;
+        this.start_chat_attempts = 1;
 
         this.sendJSON({
             cmd: 'start_chat'
         });
-        store.dispatch(chatAction.setChatState(chatStates.isLooking));
     }
 
     stop_start_chat( ) {
@@ -130,8 +129,7 @@ class WebsocketService{
             clearTimeout(this.start_chat_timeouts[i]);
        }
        this.start_chat_timeouts = [];
-       this.start_chat_attempts = 0;
-       store.dispatch(chatAction.setChatState(chatStates.lookingFailed_USR));
+       this.start_chat_attempts = 1;
     }
 
     start_chat_success(data){
@@ -139,7 +137,7 @@ class WebsocketService{
             clearTimeout(this.start_chat_timeouts[i]);
         }
         this.start_chat_timeouts = [];
-        this.start_chat_attempts = 0;
+        this.start_chat_attempts = 1;
 
         store.dispatch(chatAction.setChatState(
             chatStates.lookingSuccess,
@@ -176,7 +174,6 @@ class WebsocketService{
 
     end_chat(data) {
         this.sendJSON({cmd: 'end_chat'});
-        store.dispatch(msgAction.setTypingState(false));
     }
     receive_end_chat(data) {
         store.dispatch(chatAction.setChatState(
