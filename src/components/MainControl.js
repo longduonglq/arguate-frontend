@@ -31,8 +31,10 @@ class Control extends React.Component{
     }
 
     handleStartChatClick = () => {
-        //GWebsocket.start_chat();
-        this.props.setChatState(chatStates.isLooking);
+        if (this.props.chatState !== chatStates.isChatting &&
+            this.props.chatState !== chatStates.isLooking) {
+            this.props.setChatState(chatStates.isLooking);
+        }
         this.props.setCurrentTab(1);
     };
     
@@ -73,6 +75,7 @@ class Control extends React.Component{
 
 const mapStateToProps = state => {
     return {
+        chatState: state.chat.state,
         topics: state.topic.topics,
     }
 };
