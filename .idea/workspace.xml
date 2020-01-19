@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="backup before redoing websocket part">
-      <change afterPath="$PROJECT_DIR$/src/rdWebsocket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChatUI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatUI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EscBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EscBtn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainControl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Textarea.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Textarea.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/ChatState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/ChatState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/Tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/Tabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/websocket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/websocket.js" afterDir="false" />
-    </list>
+    <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,7 +111,7 @@
       <workItem from="1579040840517" duration="3617000" />
       <workItem from="1579047073379" duration="34403000" />
       <workItem from="1579129671048" duration="65208000" />
-      <workItem from="1579337521213" duration="20103000" />
+      <workItem from="1579337521213" duration="20372000" />
     </task>
     <task id="LOCAL-00001" summary="backup before redoing the redux part">
       <created>1579277438779</created>
@@ -138,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579341268763</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1. redo websocket part into more redux like&#10;2. fixed updating isLooking status">
+      <created>1579466222189</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579466222189</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,17 +167,18 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="backup before redoing the redux part" />
     <MESSAGE value="backup before redoing websocket part" />
-    <option name="LAST_COMMIT_MESSAGE" value="backup before redoing websocket part" />
+    <MESSAGE value="1. redo websocket part into more redux like&#10;2. fixed updating isLooking status" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. redo websocket part into more redux like&#10;2. fixed updating isLooking status" />
   </component>
   <component name="WindowStateProjectService">
     <state x="80" y="190" key="#ESLint" timestamp="1579129396216">
       <screen x="45" y="23" width="1875" height="1057" />
     </state>
     <state x="80" y="190" key="#ESLint/104.1103.1680.1027/45.23.1875.1057@45.23.1875.1057" timestamp="1579129396216" />
-    <state x="83" y="108" key="CommitChangelistDialog2" timestamp="1579466170190">
+    <state x="111" y="132" key="CommitChangelistDialog2" timestamp="1579466221784">
       <screen x="37" y="23" width="1883" height="1057" />
     </state>
-    <state x="83" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579466170190" />
+    <state x="111" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579466221784" />
     <state x="84" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/38.23.1882.1057@38.23.1882.1057" timestamp="1579411615334" />
     <state x="89" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/43.23.1877.1057@43.23.1877.1057" timestamp="1579277438243" />
     <state x="80" y="106" key="CommitChangelistDialog2/40.23.1640.1027@40.23.1640.1027" timestamp="1579341267887" />
@@ -262,10 +259,10 @@
       <screen x="40" y="23" width="1640" height="1027" />
     </state>
     <state width="827" height="321" key="GridCell.Tab.3.right/40.23.1640.1027@40.23.1640.1027" timestamp="1579335624401" />
-    <state x="76" y="261" key="Vcs.Push.Dialog.v2" timestamp="1579466162820">
+    <state x="76" y="261" key="Vcs.Push.Dialog.v2" timestamp="1579466228725">
       <screen x="37" y="23" width="1883" height="1057" />
     </state>
-    <state x="76" y="261" key="Vcs.Push.Dialog.v2/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579466162820" />
+    <state x="76" y="261" key="Vcs.Push.Dialog.v2/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579466228725" />
     <state x="559" y="605" key="com.intellij.ide.util.TipDialog" timestamp="1579040841281">
       <screen x="44" y="23" width="1876" height="1057" />
     </state>
