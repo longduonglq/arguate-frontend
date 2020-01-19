@@ -22,7 +22,7 @@ class EscBtn extends React.Component{
             escBtnStyle: null,
             escBtnText: null,
 
-            escBtnState: this.props.state
+            escBtnState: null,
         };
         this.handleEscClick = this.handleEscClick.bind(this);
         this.setBtnState = this.setBtnState.bind(this);
@@ -38,11 +38,13 @@ class EscBtn extends React.Component{
     }
 
     componentDidMount() {
+        console.log('escBtn mount');
         document.addEventListener('keydown', this.handleKeydown, false);
         switch (this.props.chatState){
             case chatStates.rest:
                 break;
             case chatStates.isLooking:
+            case chatStates.isChatting:
                 this.setState({escBtnState: btnState.quit});
                 break;
             case chatStates.lookingFailed_NOP:
@@ -58,6 +60,7 @@ class EscBtn extends React.Component{
     }
     componentWillUnmount() {
         document.removeEventListener('keydown', this.handleKeydown, false);
+        console.log('escBtn unmount');
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -74,6 +77,7 @@ class EscBtn extends React.Component{
                 case chatStates.rest:
                     break;
                 case chatStates.isLooking:
+                case chatStates.isChatting:
                     this.setState({escBtnState: btnState.quit});
                     break;
                 case chatStates.lookingFailed_NOP:
@@ -110,7 +114,20 @@ class EscBtn extends React.Component{
                     escBtnStyle: {},
                     escBtnText: 'Quit\n(ESC)'
                 });
-                this.props.setChatState(chatStates.isLooking);
+                switch(this.props.chatState){
+                    case chatStates.userDisconnect:
+                    case chatStates.otherDisconnect:
+                    case chatStates.lookingFailed_NOP:
+                    case chatStates.lookingFailed_SER:
+                    case chatStates.lookingFailed_USR:
+                    case chatStates.lookingSuccess:
+                        this.props.setChatState(chatStates.isLooking);
+                        break;
+                    case chatStates.isChatting:
+                        break;
+                    default:
+                        break;
+                }
                 break;
             case btnState.really:
                 this.setState({

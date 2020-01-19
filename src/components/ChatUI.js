@@ -60,6 +60,7 @@ class ChatUI extends React.Component {
             case chatStates.isLooking:
                 this.isLooking();
                 break;
+            case chatStates.isChatting:
             case chatStates.lookingSuccess:
                 this.lookingSuccess();
                 break;
@@ -135,7 +136,6 @@ class ChatUI extends React.Component {
     };
 
     failed_noOpponent = () => {
-        this.props.setChatState(chatStates.lookingFailed_NOP);
         this.setState({
             displayBottomMsg: true,
             bottomMsg: () => {return(
