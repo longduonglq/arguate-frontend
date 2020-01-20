@@ -16,14 +16,12 @@ class rdWebsocket {
         if (curState.chat.state !== this.prevState.chat.state){
             switch(curState.chat.state){
                 case chatStates.isLooking:
-                    console.log('rdws is looking');
                     GWebsocket.start_chat();
                     break;
                 case chatStates.userDisconnect:
                     GWebsocket.end_chat(); 
                     break;
                 case chatStates.lookingFailed_USR:
-                    console.log('looking user disconnect');
                     GWebsocket.end_chat();
                     GWebsocket.stop_start_chat();
                     break;
@@ -33,7 +31,7 @@ class rdWebsocket {
                 case chatStates.lookingFailed_NOP:
                     GWebsocket.end_chat();
                 default:
-                    console.log('default case in rdWebsocket listener');
+                    break;
             }
             this.prevState.chat.state = curState.chat.state;
         }

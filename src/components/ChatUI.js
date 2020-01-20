@@ -80,7 +80,6 @@ class ChatUI extends React.Component {
                 this.failed_disconnect('Other use has');
                 break;
             default:
-                console.log('default switch in propagateChatState');
                 break;
         }
     }
@@ -104,9 +103,7 @@ class ChatUI extends React.Component {
     };
 
     lookingSuccess = () => {
-        console.log('looking seccess called');
         function displayOpinion(props){
-            console.log('opinion', props);
             if (!props.opinion){
                 return (
                     <span style={{color:'red', fontWeight: 500}}>Against:

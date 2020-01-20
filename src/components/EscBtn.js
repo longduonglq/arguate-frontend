@@ -38,7 +38,6 @@ class EscBtn extends React.Component{
     }
 
     componentDidMount() {
-        console.log('escBtn mount');
         document.addEventListener('keydown', this.handleKeydown, false);
         switch (this.props.chatState){
             case chatStates.rest:
@@ -60,7 +59,6 @@ class EscBtn extends React.Component{
     }
     componentWillUnmount() {
         document.removeEventListener('keydown', this.handleKeydown, false);
-        console.log('escBtn unmount');
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -107,7 +105,6 @@ class EscBtn extends React.Component{
                 else if (this.props.chatState === chatStates.isChatting){
                     this.props.setChatState(chatStates.userDisconnect);
                 }
-                console.log('escBtn: someone disconnected');
                 break;
             case btnState.quit:
                 this.setState({

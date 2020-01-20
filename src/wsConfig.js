@@ -1,7 +1,7 @@
-let DEBUG = true;
+let DEBUG = false;
 
-let HOST_URL = "https://justdjango-chat.herokuapp.com";
-let SOCKET_URL = "wss://justdjango-chat.herokuapp.com";
+let HOST_URL = "https://165.227.12.224";
+let SOCKET_URL = "wss://165.227.12.224";
 
 if (DEBUG) {
   HOST_URL = "http://127.0.0.1:8000";
