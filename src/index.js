@@ -10,6 +10,7 @@ import chatReducer from './store/reducers/ChatState';
 import msgReducer from './store/reducers/MsgState';
 import topicReducer from './store/reducers/TopicState';
 import tabReducer from './store/reducers/Tabs';
+import generalReducer from './store/reducers/GeneralState';
 import GWebsocket from "./websocket";
 import rdWebsocket from "./rdWebsocket";
 import sendHttp from "./utility";
@@ -20,7 +21,8 @@ function configureStore(){
         chat: chatReducer,
         msg: msgReducer,
         topic: topicReducer,
-        tab: tabReducer
+        tab: tabReducer,
+        general: generalReducer
     });
 
     const composerEnhancer = composeWithDevTools({

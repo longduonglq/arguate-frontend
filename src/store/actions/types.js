@@ -23,3 +23,5 @@ export const chatStates = {
     userDisconnect: 'user-disconnect',
     otherDisconnect: 'other-disconnect',
 };
+
+export const SET_GENERAL_INFO = 'set-general-info';

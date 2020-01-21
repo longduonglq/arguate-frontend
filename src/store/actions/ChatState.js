@@ -7,3 +7,4 @@ export const setChatState = (state, extra=null) => {
         extra: extra // if state is success, this should indicate topic
     };
 };
+

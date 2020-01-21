@@ -35,7 +35,7 @@ class TabPanel extends React.Component {
                 className={this.props.ClassName}
                 >
                 {this.props.value === this.props.index &&
-                    <div style={this.props.style} className={this.props.ClassName}>
+                    <div style={this.props.style} className={this.props.childclass}>
                         {this.props.children}
                     </div>}
             </div>
@@ -65,17 +65,7 @@ class MainUI extends React.Component{
             <div style={{height: '100%'}}>
             <AppBar style={{backgroundColor: GConfig.Global.appBarColor}} position='static'>
                 <Grid container spacing={3} className='appBarGrid'>
-                    <Grid item xs={12} sm={3}>
-                    <Toolbar>
-                        <img src={Logo} width={64} height={64}/>
-                        <Typography variant='h3'>
-                            <Box textAlign='center' fontWeight={130}>
-                                Arguate
-                            </Box>
-                        </Typography>
-                    </Toolbar>
-                    </Grid>
-                    <Grid item xs={12} sm={8}>
+                    <Grid item xs={12} sm={12}>
                         <Tabs value={this.props.curTab} onChange={this.handleTabChange}
                                 style={{height: '100%'}} centered>
                             <Tab label='Home' {...a11yProps(0)} style={{fontSize: 20}}/>
@@ -92,6 +82,7 @@ class MainUI extends React.Component{
                     <Typography component='div'>
                         <Box textAlign='center' fontWeight={90}
                             fontSize={60} style={{paddingTop: 30, paddingBottom: 20}}>
+                            <img src={Logo} width={64} height={64}/>
                             Arguate
                         </Box>
                     </Typography>
@@ -105,7 +96,8 @@ class MainUI extends React.Component{
                 </div>
             </TabPanel>
 
-            <TabPanel value={this.props.curTab} index={1} ClassName='chatui'>
+            <TabPanel value={this.props.curTab} index={1} ClassName='chatui'
+                        childclass='childDiv'>
                 <ChatUI/>
             </TabPanel>
             </div>    

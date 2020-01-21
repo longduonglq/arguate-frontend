@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="final version">
-      <change afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/logo256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/logo64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/css/main.41fe1a02.chunk.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/css/main.41fe1a02.chunk.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/2.df6b1d48.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/2.df6b1d48.chunk.js.LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/2.df6b1d48.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/runtime-main.47912307.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/runtime-main.47912307.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/media/logo.c2cc24a5.svg" afterDir="false" />
+    <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/store/actions/GeneralState.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/GeneralState.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wsConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/wsConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainUI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainUI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/ChatState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/ChatState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ChatUI.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ChatUI.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/MainUI_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/MainUI_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Textarea.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Textarea.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +43,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/longduonglq/ldfrontend.git" />
+      </set>
+    </option>
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -132,7 +132,7 @@
       <workItem from="1579129671048" duration="65208000" />
       <workItem from="1579337521213" duration="23429000" />
       <workItem from="1579472013597" duration="5852000" />
-      <workItem from="1579492996660" duration="11984000" />
+      <workItem from="1579492996660" duration="18397000" />
     </task>
     <task id="LOCAL-00001" summary="backup before redoing the redux part">
       <created>1579277438779</created>
@@ -183,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579633273067</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="backup before updating css to be compatible with mobile">
+      <created>1579637052810</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1579637052810</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,20 +227,21 @@
     <MESSAGE value="1. fix other chat box color&#10;2. fix escBtn going blank after switch tabs to home and back" />
     <MESSAGE value="change host ip" />
     <MESSAGE value="final version" />
-    <option name="LAST_COMMIT_MESSAGE" value="final version" />
+    <MESSAGE value="backup before updating css to be compatible with mobile" />
+    <option name="LAST_COMMIT_MESSAGE" value="backup before updating css to be compatible with mobile" />
   </component>
   <component name="WindowStateProjectService">
     <state x="80" y="190" key="#ESLint" timestamp="1579129396216">
       <screen x="45" y="23" width="1875" height="1057" />
     </state>
     <state x="80" y="190" key="#ESLint/104.1103.1680.1027/45.23.1875.1057@45.23.1875.1057" timestamp="1579129396216" />
-    <state x="747" y="138" key="CommitChangelistDialog2" timestamp="1579633859126">
+    <state x="747" y="138" key="CommitChangelistDialog2" timestamp="1579637051576">
       <screen x="36" y="23" width="1644" height="1027" />
     </state>
     <state x="111" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579492821725" />
     <state x="84" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/38.23.1882.1057@38.23.1882.1057" timestamp="1579411615334" />
     <state x="89" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/43.23.1877.1057@43.23.1877.1057" timestamp="1579277438243" />
-    <state x="747" y="138" key="CommitChangelistDialog2/36.23.1644.1027@36.23.1644.1027" timestamp="1579633859126" />
+    <state x="747" y="138" key="CommitChangelistDialog2/36.23.1644.1027@36.23.1644.1027" timestamp="1579637051576" />
     <state x="102" y="129" key="CommitChangelistDialog2/37.23.1643.1027@37.23.1643.1027" timestamp="1579540754692" />
     <state x="80" y="106" key="CommitChangelistDialog2/40.23.1640.1027@40.23.1640.1027" timestamp="1579341267887" />
     <state x="129" y="120" width="585" height="745" key="DiffContextDialog" timestamp="1579321769137">
@@ -332,11 +340,12 @@
       <screen x="41" y="23" width="1879" height="1057" />
     </state>
     <state x="281" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/104.1103.1680.1027/41.23.1879.1057@41.23.1879.1057" timestamp="1579019659382" />
-    <state x="914" y="23" width="661" height="946" key="dock-window-1" timestamp="1579505359477">
-      <screen x="37" y="23" width="1643" height="1027" />
+    <state x="914" y="36" width="661" height="946" key="dock-window-1" timestamp="1579642496576">
+      <screen x="36" y="23" width="1884" height="1057" />
     </state>
     <state x="821" y="95" width="661" height="946" key="dock-window-1/104.1103.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1579403177155" />
     <state x="917" y="1124" width="661" height="946" key="dock-window-1/104.1103.1680.1027/0.23.1920.1057@104.1103.1680.1027" timestamp="1579403124974" />
+    <state x="914" y="36" width="661" height="946" key="dock-window-1/104.1103.1680.1027/36.23.1884.1057@36.23.1884.1057" timestamp="1579642496576" />
     <state x="914" y="36" width="661" height="946" key="dock-window-1/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579493017618" />
     <state x="914" y="36" width="661" height="946" key="dock-window-1/104.1103.1680.1027/38.23.1882.1057@38.23.1882.1057" timestamp="1579491304765" />
     <state x="917" y="1124" width="661" height="946" key="dock-window-1/104.1103.1680.1027/41.23.1879.1057@104.1103.1680.1027" timestamp="1579373728530" />
@@ -351,9 +360,10 @@
     <state x="862" y="23" width="660" height="946" key="dock-window-1/42.23.1638.1027@42.23.1638.1027" timestamp="1579288094432" />
     <state x="862" y="23" width="660" height="946" key="dock-window-1/43.23.1637.1027@43.23.1637.1027" timestamp="1579232389866" />
     <state x="862" y="23" width="660" height="946" key="dock-window-1/44.23.1636.1027@44.23.1636.1027" timestamp="1579111507324" />
-    <state x="193" y="1309" width="687" height="657" key="search.everywhere.popup" timestamp="1579365328166">
-      <screen x="104" y="1103" width="1680" height="1027" />
+    <state x="136" y="235" width="771" height="677" key="search.everywhere.popup" timestamp="1579639709915">
+      <screen x="36" y="23" width="1884" height="1057" />
     </state>
+    <state x="136" y="235" width="771" height="677" key="search.everywhere.popup/104.1103.1680.1027/36.23.1884.1057@36.23.1884.1057" timestamp="1579639709915" />
     <state x="193" y="1309" width="687" height="657" key="search.everywhere.popup/104.1103.1680.1027/41.23.1879.1057@104.1103.1680.1027" timestamp="1579365328166" />
     <state x="144" y="235" width="670" height="676" key="search.everywhere.popup/104.1103.1680.1027/45.23.1875.1057@45.23.1875.1057" timestamp="1579074209818" />
     <state x="127" y="229" width="670" height="657" key="search.everywhere.popup/40.23.1640.1027@40.23.1640.1027" timestamp="1579361082113" />
