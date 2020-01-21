@@ -235,9 +235,10 @@
       <screen x="45" y="23" width="1875" height="1057" />
     </state>
     <state x="80" y="190" key="#ESLint/104.1103.1680.1027/45.23.1875.1057@45.23.1875.1057" timestamp="1579129396216" />
-    <state x="747" y="138" key="CommitChangelistDialog2" timestamp="1579637051576">
-      <screen x="36" y="23" width="1644" height="1027" />
+    <state x="233" y="154" key="CommitChangelistDialog2" timestamp="1579644405870">
+      <screen x="36" y="23" width="1884" height="1057" />
     </state>
+    <state x="233" y="154" key="CommitChangelistDialog2/104.1103.1680.1027/36.23.1884.1057@36.23.1884.1057" timestamp="1579644405870" />
     <state x="111" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579492821725" />
     <state x="84" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/38.23.1882.1057@38.23.1882.1057" timestamp="1579411615334" />
     <state x="89" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/43.23.1877.1057@43.23.1877.1057" timestamp="1579277438243" />
@@ -325,9 +326,10 @@
       <screen x="37" y="23" width="1883" height="1057" />
     </state>
     <state x="225" y="248" key="RollbackChangesDialog/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579491939938" />
-    <state x="70" y="254" key="Vcs.Push.Dialog.v2" timestamp="1579633387950">
-      <screen x="36" y="23" width="1644" height="1027" />
+    <state x="75" y="261" key="Vcs.Push.Dialog.v2" timestamp="1579644408415">
+      <screen x="36" y="23" width="1884" height="1057" />
     </state>
+    <state x="75" y="261" key="Vcs.Push.Dialog.v2/104.1103.1680.1027/36.23.1884.1057@36.23.1884.1057" timestamp="1579644408415" />
     <state x="76" y="261" key="Vcs.Push.Dialog.v2/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579492837976" />
     <state x="70" y="254" key="Vcs.Push.Dialog.v2/36.23.1644.1027@36.23.1644.1027" timestamp="1579633387950" />
     <state x="71" y="254" key="Vcs.Push.Dialog.v2/37.23.1643.1027@37.23.1643.1027" timestamp="1579540760047" />
