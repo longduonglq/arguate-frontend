@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChatFeed, Message } from 'react-chat-ui';
-import {orange, red} from '@material-ui/core/colors';
+import {orange, red, blue, blueGrey} from '@material-ui/core/colors';
 import {connect} from 'react-redux';
 
 import GConfig from "../GConfig";
@@ -137,7 +137,7 @@ class ChatUI extends React.Component {
             displayBottomMsg: true,
             bottomMsg: () => {return(
                 <div style={{fontWeight: 400}}>
-                    <span style={{color: red[400], fontWeight: 500}}>
+                    <span style={{color: blueGrey[900], fontWeight: 500}}>
                     Couldn't find any available user right now. Please try again
                     and maybe add more opinions.</span>
                     <div style={{marginTop: 13,
