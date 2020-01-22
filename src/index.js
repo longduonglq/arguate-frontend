@@ -15,6 +15,7 @@ import GWebsocket from "./websocket";
 import rdWebsocket from "./rdWebsocket";
 import sendHttp from "./utility";
 import {setTopics} from "./store/actions/TopicState";
+import initVisibilityNotif from "./visibility";
 
 function configureStore(){
     const rootReducer = combineReducers({
@@ -52,6 +53,7 @@ GWebsocket.addCallback('user_id_confirmed', () => {
             var raw = JSON.parse(res);
             store.dispatch(setTopics(raw['topics']));
             ReactDOM.render(app, document.getElementById('root'));
+            initVisibilityNotif(store);
     });
 });
 GWebsocket.connect();

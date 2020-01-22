@@ -8,7 +8,17 @@ const GConfig = {
         feedbackBtnColor: blue[800],
 
         appBarColor: 'rgba(237,135,45,0.87)',
-        welcomeBackground: 'white'
+        welcomeBackground: 'white',
+
+        title: {
+            default: 'Arguate - Debate with random people',
+            looking: 'Arguate - Looking ...',
+            found: 'Arguate - You are connected!',
+            nop: 'Arguate - Couldn\'t find anyone',
+            ser: 'Arguate - Server error',
+            otherD: 'Arguate - Other user disconnected',
+            newMsg: 'Arguate - (!) New message'
+        }
     },
     TopicUI: {
         backgroundColor: 'bisque',

@@ -187,6 +187,17 @@ class WebsocketService{
     receive_msg_from(data) {
         store.dispatch(tabAction.setActiveTab(1));
         store.dispatch(msgAction.newMsg(1, data['msg']));
+        if (store.getState().general.hidden) {
+            document.title = GConfig.Global.title.newMsg;
+            var audio = new Audio('definite.mp3');
+            audio.crossOrigin = 'anonymous';
+            audio.load();
+            var prom = audio.play();
+            if (prom !== undefined){
+                prom.catch(err => {console.log(err)})
+                    .then(() => {});
+            }
+        }
     }
 
     send_msg_to(msg) {

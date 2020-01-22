@@ -43,11 +43,18 @@ class ChatUI extends React.Component {
 
     componentDidMount() {
          this.propagateChatState(this.props.chatState);
+         if (!this.props.isHidden){
+             document.title = GConfig.Global.title.default;
+         }
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
+        if (!this.props.isHidden) {
+            document.title = GConfig.Global.title.default;
+        }
         if (this.chatStateSnap === this.props.chatState) return;
         else this.chatStateSnap = this.props.chatState;
+
         if (this.props.chatState !== prevState.chatState){
             this.propagateChatState(this.props.chatState, this.props.chatStateExtra);
         }
@@ -59,16 +66,30 @@ class ChatUI extends React.Component {
                 break;
             case chatStates.isLooking:
                 this.isLooking();
+                if (this.props.isHidden) {
+                    document.title = GConfig.Global.title.looking;
+                }
                 break;
             case chatStates.isChatting:
+                this.lookingSuccess();
+                break;
             case chatStates.lookingSuccess:
                 this.lookingSuccess();
+                if (this.props.isHidden) {
+                    document.title = GConfig.Global.title.found;
+                }
                 break;
             case chatStates.lookingFailed_NOP:
                 this.failed_noOpponent();
+                if (this.props.isHidden) {
+                    document.title = GConfig.Global.title.nop;
+                }
                 break;
             case chatStates.lookingFailed_SER:
                 this.failed_serverError();
+                if (this.props.isHidden) {
+                    document.title = GConfig.Global.title.ser;
+                }
                 break;
             case chatStates.lookingFailed_USR:
                 this.failed_disconnect('You\'ve');
@@ -78,6 +99,9 @@ class ChatUI extends React.Component {
                 break;
             case chatStates.otherDisconnect:
                 this.failed_disconnect('Other use has');
+                if (this.props.isHidden) {
+                    document.title = GConfig.Global.title.otherD;
+                }
                 break;
             default:
                 break;
@@ -228,6 +252,7 @@ const mapStateToProps = state => {
         isTyping: state.msg.typingState,
         chatState: state.chat.state,
         chatStateExtra: state.chat.extra,
+        isHidden: state.general.hidden
     }
 };
 

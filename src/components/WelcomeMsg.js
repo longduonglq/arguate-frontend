@@ -23,7 +23,10 @@ class WelcomeMsg extends React.Component{
                     fontSize={18} >
                     <b>How does Arguate work?</b><br/>
                     You will first need to choose at least one topic
-                     by typing keywords in the search bar. Once finished,
+                     by typing keywords in the search bar. You can also create
+                    new topic by simply typing it in the search bar and press
+                    enter.
+                    Once finished,
                     you can use the toggle switch to express your opinion about the topic.
                     A <b style={{color:'green'}}>green</b> toggle means you're supportive of the topic
                     while a <b style={{color:'red'}}>red</b> one means you oppose it.

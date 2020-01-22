@@ -19,7 +19,7 @@ class rdWebsocket {
                     GWebsocket.start_chat();
                     break;
                 case chatStates.userDisconnect:
-                    GWebsocket.end_chat(); 
+                    GWebsocket.end_chat();
                     break;
                 case chatStates.lookingFailed_USR:
                     GWebsocket.end_chat();
