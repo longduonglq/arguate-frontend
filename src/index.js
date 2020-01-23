@@ -35,7 +35,7 @@ function configureStore(){
     });
     const store = createStore(
         rootReducer,
-        composerEnhancer()
+        //composerEnhancer()
     );
 
     return store;
@@ -46,10 +46,10 @@ const app = (
         <App/>
     </Provider>
 );
-ReactDOM.render(<NoWebsocket/>, document.getElementById('root'));
+
 GWebsocket.addCallback('user_id_confirmed', () => {
     sendHttp('user_topics', {
-            user_id: localStorage.getItem('user_id'),
+        user_id: localStorage.getItem('user_id'),
     }).then(res => {
         var raw = JSON.parse(res);
         store.dispatch(setTopics(raw['topics']));
@@ -57,5 +57,5 @@ GWebsocket.addCallback('user_id_confirmed', () => {
         initVisibilityNotif(store);
     })
 });
-
+GWebsocket.connect();
 const rdws = new rdWebsocket();

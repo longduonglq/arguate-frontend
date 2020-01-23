@@ -71,7 +71,7 @@ class WebsocketService{
             console.log("websocket closed, reopening");
             this.connect();
         };
-        return this.wait_for_connection();
+        this.wait_for_connection();
     }
     
     wait_for_connection(){
