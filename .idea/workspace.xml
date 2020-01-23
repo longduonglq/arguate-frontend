@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/NoWebsocketErrorPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wsConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/wsConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/websocket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/websocket.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +131,7 @@
       <workItem from="1579492996660" duration="21012000" />
       <workItem from="1579699010269" duration="105000" />
       <workItem from="1579724049524" duration="8157000" />
-      <workItem from="1579753479259" duration="1593000" />
+      <workItem from="1579753479259" duration="5668000" />
     </task>
     <task id="LOCAL-00001" summary="backup before redoing the redux part">
       <created>1579277438779</created>
@@ -228,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579739674819</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added support for fuzzy string matching">
+      <created>1579810848591</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1579810848591</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,15 +281,16 @@
     <MESSAGE value="change text color" />
     <MESSAGE value="added title notification" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="added support for fuzzy string matching" />
+    <option name="LAST_COMMIT_MESSAGE" value="added support for fuzzy string matching" />
   </component>
   <component name="WindowStateProjectService">
     <state x="80" y="190" key="#ESLint" timestamp="1579129396216">
       <screen x="45" y="23" width="1875" height="1057" />
     </state>
     <state x="80" y="190" key="#ESLint/104.1103.1680.1027/45.23.1875.1057@45.23.1875.1057" timestamp="1579129396216" />
-    <state x="751" y="138" key="CommitChangelistDialog2" timestamp="1579739674467">
-      <screen x="43" y="23" width="1637" height="1027" />
+    <state x="750" y="138" key="CommitChangelistDialog2" timestamp="1579810848205">
+      <screen x="42" y="23" width="1638" height="1027" />
     </state>
     <state x="233" y="154" key="CommitChangelistDialog2/104.1103.1680.1027/36.23.1884.1057@36.23.1884.1057" timestamp="1579644412505" />
     <state x="111" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579492821725" />
@@ -289,6 +300,7 @@
     <state x="747" y="138" key="CommitChangelistDialog2/36.23.1644.1027@36.23.1644.1027" timestamp="1579661515685" />
     <state x="102" y="129" key="CommitChangelistDialog2/37.23.1643.1027@37.23.1643.1027" timestamp="1579540754692" />
     <state x="80" y="106" key="CommitChangelistDialog2/40.23.1640.1027@40.23.1640.1027" timestamp="1579341267887" />
+    <state x="750" y="138" key="CommitChangelistDialog2/42.23.1638.1027@42.23.1638.1027" timestamp="1579810848205" />
     <state x="751" y="138" key="CommitChangelistDialog2/43.23.1637.1027@43.23.1637.1027" timestamp="1579739674467" />
     <state x="129" y="120" width="585" height="745" key="DiffContextDialog" timestamp="1579321769137">
       <screen x="41" y="23" width="1639" height="1027" />
