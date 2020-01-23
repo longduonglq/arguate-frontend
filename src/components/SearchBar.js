@@ -13,6 +13,10 @@ setInterval(function () {
     cache = {};
 }, 1000*60*GConfig.TopicUI.searchBarMinuteToResetCache);
 
+function isEmptyOrSpaces(str){
+    return str === null || str.match(/^\s*$/) !== null;
+}
+
 const loadOptions = (inputValue, callback) => {
     if (inputValue in cache){
         callback(cache[inputValue]);
@@ -29,9 +33,11 @@ const loadOptions = (inputValue, callback) => {
                 return;
             }
 
-            raw['topics'].sort(function (a, b) {
-                return b[1] + b[2] - a[1] - a[2];
-            });
+            if (isEmptyOrSpaces(inputValue)) {
+                raw['topics'].sort(function (a, b) {
+                    return b[1] + b[2] - a[1] - a[2];
+                });
+            }
             var tamed = [];
             for (let i = 0; i < raw['topics'].length; i++) {
                 var people = raw['topics'][i][1] + raw['topics'][i][2];
