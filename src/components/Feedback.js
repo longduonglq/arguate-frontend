@@ -72,7 +72,7 @@ class Feedback extends React.Component {
               onChange={this.fbChange}
             margin="dense"
             id="fback"
-            label='Enter problem or suggestion here'
+            label='Describe your problem or suggestion here'
             type="text"
             multiline={true}
             rows={6}

@@ -17,6 +17,11 @@ function isEmptyOrSpaces(str){
     return str === null || str.match(/^\s*$/) !== null;
 }
 
+function fires(people){
+    var fire = String.fromCodePoint(parseInt('1F525', 16));
+    return fire;
+}
+
 const loadOptions = (inputValue, callback) => {
     if (inputValue in cache){
         callback(cache[inputValue]);
@@ -25,7 +30,8 @@ const loadOptions = (inputValue, callback) => {
     sendHttp('topics', {
         user_id: localStorage.getItem('user_id'),
         input: inputValue
-    }).then(res => {
+    }).then(
+        res => {
             var raw = JSON.parse(res);
             if (!('topics' in raw) || raw['topics'].length === 0) {
                 callback([]);
@@ -41,9 +47,15 @@ const loadOptions = (inputValue, callback) => {
             var tamed = [];
             for (let i = 0; i < raw['topics'].length; i++) {
                 var people = raw['topics'][i][1] + raw['topics'][i][2];
+
+                var label = undefined;
+                label = GConfig.Global.showNumberOfPeople?
+                    `${raw['topics'][i][0]} (${people} people online)`
+                    :`${raw['topics'][i][0]} ${fires(people)}`;
+
                 tamed.push({
                     value: raw['topics'][i][0],
-                    label: `${raw['topics'][i][0]} (${people} people)`
+                    label: label
                 });
             }
             cache[inputValue] = tamed;

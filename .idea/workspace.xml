@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/NoWebsocketErrorPage.js" afterDir="false" />
+    <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="added error page&#10;added show_number_of_people option to GConfig&#10;added starter code on displaying hotness of topic as fire">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/websocket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/websocket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Feedback.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Feedback.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/wsConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/wsConfig.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +130,7 @@
       <workItem from="1579492996660" duration="21012000" />
       <workItem from="1579699010269" duration="105000" />
       <workItem from="1579724049524" duration="8157000" />
-      <workItem from="1579753479259" duration="5668000" />
+      <workItem from="1579753479259" duration="14752000" />
     </task>
     <task id="LOCAL-00001" summary="backup before redoing the redux part">
       <created>1579277438779</created>
@@ -238,7 +237,35 @@
       <option name="project" value="LOCAL" />
       <updated>1579810848591</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added error page">
+      <created>1579818293253</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1579818293253</updated>
+    </task>
+    <task id="LOCAL-00017" summary="added error page">
+      <created>1579818468412</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1579818468412</updated>
+    </task>
+    <task id="LOCAL-00018" summary="added error page">
+      <created>1579818491478</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1579818491478</updated>
+    </task>
+    <task id="LOCAL-00019" summary="added error page">
+      <created>1579818509397</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1579818509397</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,14 +309,15 @@
     <MESSAGE value="added title notification" />
     <MESSAGE value="update" />
     <MESSAGE value="added support for fuzzy string matching" />
-    <option name="LAST_COMMIT_MESSAGE" value="added support for fuzzy string matching" />
+    <MESSAGE value="added error page" />
+    <option name="LAST_COMMIT_MESSAGE" value="added error page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="80" y="190" key="#ESLint" timestamp="1579129396216">
       <screen x="45" y="23" width="1875" height="1057" />
     </state>
     <state x="80" y="190" key="#ESLint/104.1103.1680.1027/45.23.1875.1057@45.23.1875.1057" timestamp="1579129396216" />
-    <state x="317" y="136" key="CommitChangelistDialog2" timestamp="1579818491140">
+    <state x="756" y="129" key="CommitChangelistDialog2" timestamp="1579895977890">
       <screen x="41" y="23" width="1639" height="1027" />
     </state>
     <state x="233" y="154" key="CommitChangelistDialog2/104.1103.1680.1027/36.23.1884.1057@36.23.1884.1057" timestamp="1579644412505" />
@@ -300,7 +328,7 @@
     <state x="747" y="138" key="CommitChangelistDialog2/36.23.1644.1027@36.23.1644.1027" timestamp="1579661515685" />
     <state x="102" y="129" key="CommitChangelistDialog2/37.23.1643.1027@37.23.1643.1027" timestamp="1579540754692" />
     <state x="80" y="106" key="CommitChangelistDialog2/40.23.1640.1027@40.23.1640.1027" timestamp="1579341267887" />
-    <state x="317" y="136" key="CommitChangelistDialog2/41.23.1639.1027@41.23.1639.1027" timestamp="1579818491140" />
+    <state x="756" y="129" key="CommitChangelistDialog2/41.23.1639.1027@41.23.1639.1027" timestamp="1579895977890" />
     <state x="750" y="138" key="CommitChangelistDialog2/42.23.1638.1027@42.23.1638.1027" timestamp="1579810848205" />
     <state x="751" y="138" key="CommitChangelistDialog2/43.23.1637.1027@43.23.1637.1027" timestamp="1579739674467" />
     <state x="129" y="120" width="585" height="745" key="DiffContextDialog" timestamp="1579321769137">
@@ -384,7 +412,7 @@
       <screen x="37" y="23" width="1883" height="1057" />
     </state>
     <state x="225" y="248" key="RollbackChangesDialog/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579491939938" />
-    <state x="75" y="254" key="Vcs.Push.Dialog.v2" timestamp="1579818504246">
+    <state x="75" y="254" key="Vcs.Push.Dialog.v2" timestamp="1579818520611">
       <screen x="41" y="23" width="1639" height="1027" />
     </state>
     <state x="75" y="261" key="Vcs.Push.Dialog.v2/104.1103.1680.1027/36.23.1884.1057@36.23.1884.1057" timestamp="1579645151758" />
@@ -392,7 +420,7 @@
     <state x="69" y="254" key="Vcs.Push.Dialog.v2/35.23.1645.1027@35.23.1645.1027" timestamp="1579662856365" />
     <state x="70" y="254" key="Vcs.Push.Dialog.v2/36.23.1644.1027@36.23.1644.1027" timestamp="1579677879029" />
     <state x="71" y="254" key="Vcs.Push.Dialog.v2/37.23.1643.1027@37.23.1643.1027" timestamp="1579540760047" />
-    <state x="75" y="254" key="Vcs.Push.Dialog.v2/41.23.1639.1027@41.23.1639.1027" timestamp="1579818504246" />
+    <state x="75" y="254" key="Vcs.Push.Dialog.v2/41.23.1639.1027@41.23.1639.1027" timestamp="1579818520611" />
     <state x="77" y="254" key="Vcs.Push.Dialog.v2/43.23.1637.1027@43.23.1637.1027" timestamp="1579739678345" />
     <state x="554" y="605" key="com.intellij.ide.util.TipDialog" timestamp="1579472019195">
       <screen x="37" y="23" width="1883" height="1057" />

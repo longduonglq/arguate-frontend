@@ -18,7 +18,8 @@ const GConfig = {
             ser: 'Arguate - Server error',
             otherD: 'Arguate - Other user disconnected',
             newMsg: 'Arguate - (!) New message'
-        }
+        },
+        showNumberOfPeople: true
     },
     TopicUI: {
         backgroundColor: 'bisque',
