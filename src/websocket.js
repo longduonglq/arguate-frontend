@@ -135,6 +135,16 @@ class WebsocketService{
         for (let i = 0; i < this.start_chat_timeouts.length; i++){
             clearTimeout(this.start_chat_timeouts[i]);
         }
+
+        var s = 0;
+        for (let k = 0; k < this.start_chat_attempts; k++){
+            s += GConfig.ws.chatFindingAttempts[k];
+        }
+        this.sendJSON({
+            cmd: 'start_chat_wait_time',
+            time: s
+        });
+
         this.start_chat_timeouts = [];
         this.start_chat_attempts = 1;
 
@@ -161,6 +171,14 @@ class WebsocketService{
                 chatStates.lookingFailed_NOP
             ));
             store.dispatch(tabAction.setActiveTab(1));
+            var s = 0;
+            for (let k = 0; k < GConfig.ws.chatFindingAttempts.length; k++){
+                s += GConfig.ws.chatFindingAttempts[k];
+            }
+            this.sendJSON({
+                cmd: 'start_chat_wait_time',
+                time: s
+            });
         }
     }
 
@@ -189,14 +207,6 @@ class WebsocketService{
         store.dispatch(msgAction.newMsg(1, data['msg']));
         if (store.getState().general.hidden) {
             document.title = GConfig.Global.title.newMsg;
-            var audio = new Audio('definite.mp3');
-            audio.crossOrigin = 'anonymous';
-            audio.load();
-            var prom = audio.play();
-            if (prom !== undefined){
-                prom.catch(err => {console.log(err)})
-                    .then(() => {});
-            }
         }
     }
 
