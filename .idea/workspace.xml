@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="implement title flashing when new message arrives">
-      <change afterPath="$PROJECT_DIR$/src/titleFlash.js" afterDir="false" />
+    <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/logos/cover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logos/cover.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logos/facebook cover.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/websocket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/websocket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wsConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/wsConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +131,8 @@
       <workItem from="1579492996660" duration="21012000" />
       <workItem from="1579699010269" duration="105000" />
       <workItem from="1579724049524" duration="8157000" />
-      <workItem from="1579753479259" duration="20969000" />
+      <workItem from="1579753479259" duration="22148000" />
+      <workItem from="1580055314622" duration="2946000" />
     </task>
     <task id="LOCAL-00001" summary="backup before redoing the redux part">
       <created>1579277438779</created>
@@ -271,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579896625866</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="implement title flashing when new message arrives&#10;added support for prometheus">
+      <created>1580028877875</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1580028877875</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,19 +327,21 @@
     <MESSAGE value="added support for fuzzy string matching" />
     <MESSAGE value="added error page" />
     <MESSAGE value="added error page&#10;added show_number_of_people option to GConfig&#10;added starter code on displaying hotness of topic as fire" />
-    <option name="LAST_COMMIT_MESSAGE" value="added error page&#10;added show_number_of_people option to GConfig&#10;added starter code on displaying hotness of topic as fire" />
+    <MESSAGE value="implement title flashing when new message arrives&#10;added support for prometheus" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement title flashing when new message arrives&#10;added support for prometheus" />
   </component>
   <component name="WindowStateProjectService">
     <state x="80" y="190" key="#ESLint" timestamp="1579129396216">
       <screen x="45" y="23" width="1875" height="1057" />
     </state>
     <state x="80" y="190" key="#ESLint/104.1103.1680.1027/45.23.1875.1057@45.23.1875.1057" timestamp="1579129396216" />
-    <state x="756" y="129" key="CommitChangelistDialog2" timestamp="1579928981790">
-      <screen x="41" y="23" width="1639" height="1027" />
+    <state x="861" y="132" key="CommitChangelistDialog2" timestamp="1580028877416">
+      <screen x="42" y="23" width="1878" height="1057" />
     </state>
     <state x="233" y="154" key="CommitChangelistDialog2/104.1103.1680.1027/36.23.1884.1057@36.23.1884.1057" timestamp="1579644412505" />
     <state x="111" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579492821725" />
     <state x="84" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/38.23.1882.1057@38.23.1882.1057" timestamp="1579411615334" />
+    <state x="861" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/42.23.1878.1057@42.23.1878.1057" timestamp="1580028877416" />
     <state x="89" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/43.23.1877.1057@43.23.1877.1057" timestamp="1579277438243" />
     <state x="746" y="138" key="CommitChangelistDialog2/35.23.1645.1027@35.23.1645.1027" timestamp="1579662844352" />
     <state x="747" y="138" key="CommitChangelistDialog2/36.23.1644.1027@36.23.1644.1027" timestamp="1579661515685" />
@@ -419,21 +431,22 @@
       <screen x="37" y="23" width="1883" height="1057" />
     </state>
     <state x="225" y="248" key="RollbackChangesDialog/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579491939938" />
-    <state x="75" y="254" key="Vcs.Push.Dialog.v2" timestamp="1579896633051">
-      <screen x="41" y="23" width="1639" height="1027" />
+    <state x="81" y="261" key="Vcs.Push.Dialog.v2" timestamp="1580028882071">
+      <screen x="42" y="23" width="1878" height="1057" />
     </state>
     <state x="75" y="261" key="Vcs.Push.Dialog.v2/104.1103.1680.1027/36.23.1884.1057@36.23.1884.1057" timestamp="1579645151758" />
     <state x="76" y="261" key="Vcs.Push.Dialog.v2/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579492837976" />
+    <state x="81" y="261" key="Vcs.Push.Dialog.v2/104.1103.1680.1027/42.23.1878.1057@42.23.1878.1057" timestamp="1580028882071" />
     <state x="69" y="254" key="Vcs.Push.Dialog.v2/35.23.1645.1027@35.23.1645.1027" timestamp="1579662856365" />
     <state x="70" y="254" key="Vcs.Push.Dialog.v2/36.23.1644.1027@36.23.1644.1027" timestamp="1579677879029" />
     <state x="71" y="254" key="Vcs.Push.Dialog.v2/37.23.1643.1027@37.23.1643.1027" timestamp="1579540760047" />
     <state x="75" y="254" key="Vcs.Push.Dialog.v2/41.23.1639.1027@41.23.1639.1027" timestamp="1579896633051" />
     <state x="77" y="254" key="Vcs.Push.Dialog.v2/43.23.1637.1027@43.23.1637.1027" timestamp="1579739678345" />
-    <state x="554" y="605" key="com.intellij.ide.util.TipDialog" timestamp="1579472019195">
-      <screen x="37" y="23" width="1883" height="1057" />
+    <state x="559" y="605" key="com.intellij.ide.util.TipDialog" timestamp="1580055315016">
+      <screen x="44" y="23" width="1876" height="1057" />
     </state>
     <state x="554" y="605" key="com.intellij.ide.util.TipDialog/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579472019195" />
-    <state x="559" y="605" key="com.intellij.ide.util.TipDialog/104.1103.1680.1027/44.23.1876.1057@44.23.1876.1057" timestamp="1579040841281" />
+    <state x="559" y="605" key="com.intellij.ide.util.TipDialog/104.1103.1680.1027/44.23.1876.1057@44.23.1876.1057" timestamp="1580055315016" />
     <state x="281" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579019659382">
       <screen x="41" y="23" width="1879" height="1057" />
     </state>

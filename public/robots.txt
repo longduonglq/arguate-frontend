@@ -1,2 +1,7 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
+Allow: /*$
+Disallow: /*ldadmin$
+Disallow: /*itsme$
+Disallow: /*topics$
+Disallow: /*user_topics$
