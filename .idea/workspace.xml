@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="">
+    <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="1. update dropdown list every time menu is opened&#10;2. flash title">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WelcomeMsg.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WelcomeMsg.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +130,7 @@
       <workItem from="1580055314622" duration="2946000" />
       <workItem from="1580080943386" duration="1926000" />
       <workItem from="1580090680123" duration="924000" />
+      <workItem from="1580133676589" duration="8106000" />
     </task>
     <task id="LOCAL-00001" summary="backup before redoing the redux part">
       <created>1579277438779</created>
@@ -286,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580090031986</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="1. update dropdown list every time menu is opened">
+      <created>1580149866194</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1580149866194</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,20 +341,22 @@
     <MESSAGE value="added error page&#10;added show_number_of_people option to GConfig&#10;added starter code on displaying hotness of topic as fire" />
     <MESSAGE value="implement title flashing when new message arrives&#10;added support for prometheus" />
     <MESSAGE value="fixed spelling error" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed spelling error" />
+    <MESSAGE value="1. update dropdown list every time menu is opened" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. update dropdown list every time menu is opened" />
   </component>
   <component name="WindowStateProjectService">
     <state x="80" y="190" key="#ESLint" timestamp="1579129396216">
       <screen x="45" y="23" width="1875" height="1057" />
     </state>
     <state x="80" y="190" key="#ESLint/104.1103.1680.1027/45.23.1875.1057@45.23.1875.1057" timestamp="1579129396216" />
-    <state x="861" y="132" key="CommitChangelistDialog2" timestamp="1580099541965">
-      <screen x="42" y="23" width="1878" height="1057" />
+    <state x="860" y="132" key="CommitChangelistDialog2" timestamp="1580149865478">
+      <screen x="41" y="23" width="1879" height="1057" />
     </state>
     <state x="233" y="154" key="CommitChangelistDialog2/104.1103.1680.1027/36.23.1884.1057@36.23.1884.1057" timestamp="1579644412505" />
     <state x="111" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579492821725" />
     <state x="84" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/38.23.1882.1057@38.23.1882.1057" timestamp="1579411615334" />
-    <state x="861" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/42.23.1878.1057@42.23.1878.1057" timestamp="1580099541965" />
+    <state x="860" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/41.23.1879.1057@41.23.1879.1057" timestamp="1580149865478" />
+    <state x="861" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/42.23.1878.1057@42.23.1878.1057" timestamp="1580147536037" />
     <state x="89" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/43.23.1877.1057@43.23.1877.1057" timestamp="1580084660183" />
     <state x="746" y="138" key="CommitChangelistDialog2/35.23.1645.1027@35.23.1645.1027" timestamp="1579662844352" />
     <state x="747" y="138" key="CommitChangelistDialog2/36.23.1644.1027@36.23.1644.1027" timestamp="1579661515685" />
@@ -448,10 +457,11 @@
     <state x="71" y="254" key="Vcs.Push.Dialog.v2/37.23.1643.1027@37.23.1643.1027" timestamp="1579540760047" />
     <state x="75" y="254" key="Vcs.Push.Dialog.v2/41.23.1639.1027@41.23.1639.1027" timestamp="1579896633051" />
     <state x="77" y="254" key="Vcs.Push.Dialog.v2/43.23.1637.1027@43.23.1637.1027" timestamp="1579739678345" />
-    <state x="559" y="605" key="com.intellij.ide.util.TipDialog" timestamp="1580055315016">
-      <screen x="44" y="23" width="1876" height="1057" />
+    <state x="558" y="605" key="com.intellij.ide.util.TipDialog" timestamp="1580133755853">
+      <screen x="42" y="23" width="1878" height="1057" />
     </state>
     <state x="554" y="605" key="com.intellij.ide.util.TipDialog/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579472019195" />
+    <state x="558" y="605" key="com.intellij.ide.util.TipDialog/104.1103.1680.1027/42.23.1878.1057@42.23.1878.1057" timestamp="1580133755853" />
     <state x="559" y="605" key="com.intellij.ide.util.TipDialog/104.1103.1680.1027/44.23.1876.1057@44.23.1876.1057" timestamp="1580055315016" />
     <state x="281" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579019659382">
       <screen x="41" y="23" width="1879" height="1057" />
