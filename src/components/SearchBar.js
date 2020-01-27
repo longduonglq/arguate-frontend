@@ -73,8 +73,6 @@ class SearchBar extends React.Component{
     };
 
     handleMenuOpen = () => {
-        console.log('menu open');
-        console.log(this.refs.async);
         var self = this.refs.async;
         self.mounted=true;
         self.loadOptions('', options => {
