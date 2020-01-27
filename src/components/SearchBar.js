@@ -8,11 +8,6 @@ import * as topic from '../store/actions/TopicState';
 import {connect} from 'react-redux';
 import GWebsocket from "../websocket";
 
-var cache = {};
-setInterval(function () {
-    cache = {};
-}, 1000*60*GConfig.TopicUI.searchBarMinuteToResetCache);
-
 function isEmptyOrSpaces(str){
     return str === null || str.match(/^\s*$/) !== null;
 }
@@ -23,10 +18,10 @@ function fires(people){
 }
 
 const loadOptions = (inputValue, callback) => {
-    if (inputValue in cache){
-        callback(cache[inputValue]);
-        return;
-    }
+    //if (inputValue in cache){
+    //    callback(cache[inputValue]);
+    //    return;
+    //}
     sendHttp('topics', {
         user_id: localStorage.getItem('user_id'),
         input: inputValue
@@ -35,7 +30,6 @@ const loadOptions = (inputValue, callback) => {
             var raw = JSON.parse(res);
             if (!('topics' in raw) || raw['topics'].length === 0) {
                 callback([]);
-                cache[inputValue] = [];
                 return;
             }
 
@@ -58,7 +52,6 @@ const loadOptions = (inputValue, callback) => {
                     label: label
                 });
             }
-            cache[inputValue] = tamed;
             callback(tamed);
         }
     );
@@ -79,15 +72,29 @@ class SearchBar extends React.Component{
         GWebsocket.register_opinion(newValue.value, true);
     };
 
+    handleMenuOpen = () => {
+        console.log('menu open');
+        console.log(this.refs.async);
+        var self = this.refs.async;
+        self.mounted=true;
+        self.loadOptions('', options => {
+            if (!self.mounted) return;
+            const isLoading = !!self.lastRequest;
+            self.setState({defaultOptions: options  || [], isLoading});
+        });
+    };
+
     render() {
         return (
             <div>
                 <AsyncCreatableSelect
                     onChange={this.handleChange}
-                    cacheOptions
+                    cacheOptions={false}
                     defaultOptions
                     placeholder={'Type in keywords to find topics...'}
                     loadOptions={debounceOption}
+                    onMenuOpen={this.handleMenuOpen}
+                    ref='async'
                 />
             </div>
         );
