@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="">
+    <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="remove comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GConfig.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +131,7 @@
       <workItem from="1580055314622" duration="2946000" />
       <workItem from="1580080943386" duration="1926000" />
       <workItem from="1580090680123" duration="924000" />
-      <workItem from="1580133676589" duration="8522000" />
+      <workItem from="1580133676589" duration="9749000" />
     </task>
     <task id="LOCAL-00001" summary="backup before redoing the redux part">
       <created>1579277438779</created>
@@ -301,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580150079331</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="remove comments">
+      <created>1580150803433</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1580150803433</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,21 +357,22 @@
     <MESSAGE value="implement title flashing when new message arrives&#10;added support for prometheus" />
     <MESSAGE value="fixed spelling error" />
     <MESSAGE value="1. update dropdown list every time menu is opened" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. update dropdown list every time menu is opened" />
+    <MESSAGE value="remove comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove comments" />
   </component>
   <component name="WindowStateProjectService">
     <state x="80" y="190" key="#ESLint" timestamp="1579129396216">
       <screen x="45" y="23" width="1875" height="1057" />
     </state>
     <state x="80" y="190" key="#ESLint/104.1103.1680.1027/45.23.1875.1057@45.23.1875.1057" timestamp="1579129396216" />
-    <state x="859" y="132" key="CommitChangelistDialog2" timestamp="1580150078612">
-      <screen x="40" y="23" width="1880" height="1057" />
+    <state x="860" y="132" key="CommitChangelistDialog2" timestamp="1580154678858">
+      <screen x="41" y="23" width="1879" height="1057" />
     </state>
     <state x="233" y="154" key="CommitChangelistDialog2/104.1103.1680.1027/36.23.1884.1057@36.23.1884.1057" timestamp="1579644412505" />
     <state x="111" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579492821725" />
     <state x="84" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/38.23.1882.1057@38.23.1882.1057" timestamp="1579411615334" />
-    <state x="859" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/40.23.1880.1057@40.23.1880.1057" timestamp="1580150078612" />
-    <state x="860" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/41.23.1879.1057@41.23.1879.1057" timestamp="1580149865478" />
+    <state x="859" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/40.23.1880.1057@40.23.1880.1057" timestamp="1580150802830" />
+    <state x="860" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/41.23.1879.1057@41.23.1879.1057" timestamp="1580154678858" />
     <state x="861" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/42.23.1878.1057@42.23.1878.1057" timestamp="1580147536037" />
     <state x="89" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/43.23.1877.1057@43.23.1877.1057" timestamp="1580084660183" />
     <state x="746" y="138" key="CommitChangelistDialog2/35.23.1645.1027@35.23.1645.1027" timestamp="1579662844352" />
@@ -455,12 +463,12 @@
       <screen x="37" y="23" width="1883" height="1057" />
     </state>
     <state x="225" y="248" key="RollbackChangesDialog/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579491939938" />
-    <state x="79" y="261" key="Vcs.Push.Dialog.v2" timestamp="1580150169074">
+    <state x="79" y="261" key="Vcs.Push.Dialog.v2" timestamp="1580150807350">
       <screen x="40" y="23" width="1880" height="1057" />
     </state>
     <state x="75" y="261" key="Vcs.Push.Dialog.v2/104.1103.1680.1027/36.23.1884.1057@36.23.1884.1057" timestamp="1579645151758" />
     <state x="76" y="261" key="Vcs.Push.Dialog.v2/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579492837976" />
-    <state x="79" y="261" key="Vcs.Push.Dialog.v2/104.1103.1680.1027/40.23.1880.1057@40.23.1880.1057" timestamp="1580150169074" />
+    <state x="79" y="261" key="Vcs.Push.Dialog.v2/104.1103.1680.1027/40.23.1880.1057@40.23.1880.1057" timestamp="1580150807350" />
     <state x="81" y="261" key="Vcs.Push.Dialog.v2/104.1103.1680.1027/42.23.1878.1057@42.23.1878.1057" timestamp="1580028882071" />
     <state x="69" y="254" key="Vcs.Push.Dialog.v2/35.23.1645.1027@35.23.1645.1027" timestamp="1579662856365" />
     <state x="70" y="254" key="Vcs.Push.Dialog.v2/36.23.1644.1027@36.23.1644.1027" timestamp="1579677879029" />

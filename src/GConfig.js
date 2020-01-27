@@ -36,7 +36,7 @@ const GConfig = {
         user_typing_pulse: 760,
     },
     ws: {
-        chatFindingAttempts: [1, 1.5, 2.5, 4.5, 6],
+        chatFindingAttempts: [1, 1, 1, 1.5, 2.5, 4.5, 6],
     }
 };
 
