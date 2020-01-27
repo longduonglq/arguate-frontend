@@ -14,7 +14,7 @@ class WelcomeMsg extends React.Component{
                 <Box textAlign='justify' m={4} fontWeight='fontWeightRegular'
                     fontSize={18} >
                     <b>What is Arguate?</b><br/>
-                    Arguate is a website that let you chat with other
+                    Arguate is a website that let you chat with
                     people who disagree with you. The goal of this website is to be a
                     platform where people could challenge each other beliefs via
                     interesting conversations.
@@ -25,12 +25,12 @@ class WelcomeMsg extends React.Component{
                     You will first need to choose at least one topic
                      by typing keywords in the search bar. You can also create
                     new topic by simply typing it in the search bar and press
-                    enter.
+                    Enter.
                     Once finished,
                     you can use the toggle switch to express your opinion about the topic.
                     A <b style={{color:'green'}}>green</b> toggle means you're supportive of the topic
                     while a <b style={{color:'red'}}>red</b> one means you oppose it.
-                    Once done, press <b style={{color:'blue'}}>Start Chat</b>. Arguate will find
+                    Then, press <b style={{color:'blue'}}>Start Chat</b>. Arguate will find
                     and match you with another user who has the opposite opinion.
                 </Box>
                 </Typography>
