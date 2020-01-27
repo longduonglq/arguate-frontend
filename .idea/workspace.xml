@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/logos/cover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logos/cover.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logos/facebook cover.png" afterDir="false" />
+    <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="fixed spelling error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChatUI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatUI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/wsConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/wsConfig.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +131,7 @@
       <workItem from="1579724049524" duration="8157000" />
       <workItem from="1579753479259" duration="22148000" />
       <workItem from="1580055314622" duration="2946000" />
+      <workItem from="1580080943386" duration="1916000" />
     </task>
     <task id="LOCAL-00001" summary="backup before redoing the redux part">
       <created>1579277438779</created>
@@ -335,14 +334,14 @@
       <screen x="45" y="23" width="1875" height="1057" />
     </state>
     <state x="80" y="190" key="#ESLint/104.1103.1680.1027/45.23.1875.1057@45.23.1875.1057" timestamp="1579129396216" />
-    <state x="861" y="132" key="CommitChangelistDialog2" timestamp="1580028877416">
-      <screen x="42" y="23" width="1878" height="1057" />
+    <state x="89" y="108" key="CommitChangelistDialog2" timestamp="1580084660183">
+      <screen x="43" y="23" width="1877" height="1057" />
     </state>
     <state x="233" y="154" key="CommitChangelistDialog2/104.1103.1680.1027/36.23.1884.1057@36.23.1884.1057" timestamp="1579644412505" />
     <state x="111" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579492821725" />
     <state x="84" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/38.23.1882.1057@38.23.1882.1057" timestamp="1579411615334" />
     <state x="861" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/42.23.1878.1057@42.23.1878.1057" timestamp="1580028877416" />
-    <state x="89" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/43.23.1877.1057@43.23.1877.1057" timestamp="1579277438243" />
+    <state x="89" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/43.23.1877.1057@43.23.1877.1057" timestamp="1580084660183" />
     <state x="746" y="138" key="CommitChangelistDialog2/35.23.1645.1027@35.23.1645.1027" timestamp="1579662844352" />
     <state x="747" y="138" key="CommitChangelistDialog2/36.23.1644.1027@36.23.1644.1027" timestamp="1579661515685" />
     <state x="102" y="129" key="CommitChangelistDialog2/37.23.1643.1027@37.23.1643.1027" timestamp="1579540754692" />

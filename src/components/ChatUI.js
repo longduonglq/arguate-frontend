@@ -98,7 +98,7 @@ class ChatUI extends React.Component {
                 this.failed_disconnect('You\'ve');
                 break;
             case chatStates.otherDisconnect:
-                this.failed_disconnect('Other use has');
+                this.failed_disconnect('Other user has');
                 if (this.props.isHidden) {
                     document.title = GConfig.Global.title.otherD;
                 }
