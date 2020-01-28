@@ -28,8 +28,8 @@ class WelcomeMsg extends React.Component{
                     Enter.
                     Once finished,
                     you can use the toggle switch to express your opinion about the topic.
-                    A <b style={{color:'green'}}>green</b> toggle means you're supportive of the topic
-                    while a <b style={{color:'red'}}>red</b> one means you oppose it.
+                    A <b style={{color:'green'}}>green</b> toggle means you agree with the topic
+                    while a <b style={{color:'red'}}>red</b> one means you disagree with it.
                     Then, press <b style={{color:'blue'}}>Start Chat</b>. Arguate will find
                     and match you with another user who has the opposite opinion.
                 </Box>
