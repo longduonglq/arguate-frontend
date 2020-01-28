@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wsConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/wsConfig.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +130,7 @@
       <workItem from="1580055314622" duration="2946000" />
       <workItem from="1580080943386" duration="1926000" />
       <workItem from="1580090680123" duration="924000" />
-      <workItem from="1580133676589" duration="11056000" />
+      <workItem from="1580133676589" duration="11718000" />
     </task>
     <task id="LOCAL-00001" summary="backup before redoing the redux part">
       <created>1579277438779</created>
@@ -316,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580155379870</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="change description content">
+      <created>1580191770375</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1580191770375</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,21 +372,22 @@
     <MESSAGE value="1. update dropdown list every time menu is opened" />
     <MESSAGE value="remove comments" />
     <MESSAGE value="change wait times" />
-    <option name="LAST_COMMIT_MESSAGE" value="change wait times" />
+    <MESSAGE value="change description content" />
+    <option name="LAST_COMMIT_MESSAGE" value="change description content" />
   </component>
   <component name="WindowStateProjectService">
     <state x="80" y="190" key="#ESLint" timestamp="1579129396216">
       <screen x="45" y="23" width="1875" height="1057" />
     </state>
     <state x="80" y="190" key="#ESLint/104.1103.1680.1027/45.23.1875.1057@45.23.1875.1057" timestamp="1579129396216" />
-    <state x="860" y="132" key="CommitChangelistDialog2" timestamp="1580155379664">
+    <state x="860" y="132" key="CommitChangelistDialog2" timestamp="1580191770117">
       <screen x="41" y="23" width="1879" height="1057" />
     </state>
     <state x="233" y="154" key="CommitChangelistDialog2/104.1103.1680.1027/36.23.1884.1057@36.23.1884.1057" timestamp="1579644412505" />
     <state x="111" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579492821725" />
     <state x="84" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/38.23.1882.1057@38.23.1882.1057" timestamp="1579411615334" />
     <state x="859" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/40.23.1880.1057@40.23.1880.1057" timestamp="1580150802830" />
-    <state x="860" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/41.23.1879.1057@41.23.1879.1057" timestamp="1580155379664" />
+    <state x="860" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/41.23.1879.1057@41.23.1879.1057" timestamp="1580191770117" />
     <state x="861" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/42.23.1878.1057@42.23.1878.1057" timestamp="1580147536037" />
     <state x="89" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/43.23.1877.1057@43.23.1877.1057" timestamp="1580084660183" />
     <state x="746" y="138" key="CommitChangelistDialog2/35.23.1645.1027@35.23.1645.1027" timestamp="1579662844352" />

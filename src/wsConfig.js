@@ -1,4 +1,4 @@
-let DEBUG = true;
+let DEBUG = false;
 
 let HOST_URL = "https://arguate.com";
 let SOCKET_URL = "wss://arguate.com";
