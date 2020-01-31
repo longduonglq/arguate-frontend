@@ -50,14 +50,16 @@ class WebsocketService{
             if ('user_id' in localStorage){
                 this.sendJSON({
                     cmd: 'user_id',
-                    id: localStorage.getItem('user_id')
+                    id: localStorage.getItem('user_id'),
+                    admin: store.getState().general.admin
                 });
             }else{
                 let _id = uuid4();
                 localStorage.setItem('user_id', _id);
                 this.sendJSON({
                     cmd: 'user_id',
-                    id: _id
+                    id: _id,
+                    admin: store.getState().general.admin
                 });
             }
         };
@@ -119,7 +121,7 @@ class WebsocketService{
         this.start_chat_attempts = 1;
 
         this.sendJSON({
-            cmd: 'start_chat'
+            cmd: 'start_chat',
         });
     }
 

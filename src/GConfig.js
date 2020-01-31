@@ -1,4 +1,15 @@
 import {red, blue, orange, grey} from '@material-ui/core/colors';
+import {store} from "./index";
+
+var isAdmin = false, adminAttempts = null;
+if (localStorage.getItem('admin') !== undefined &&
+    localStorage.getItem('admin') === 'true') {
+    isAdmin = true;
+    adminAttempts = new Array(3600);
+    for (let i = 0; i < 3600; i ++){
+        adminAttempts[i] = 1;
+    }
+}
 
 const GConfig = {
     Global: {
@@ -36,8 +47,8 @@ const GConfig = {
         user_typing_pulse: 760,
     },
     ws: {
-        chatFindingAttempts: [1, 1, 1, 1.5, 2.5, 4.5, 6],
+        chatFindingAttempts: isAdmin? adminAttempts : [1, 1, 1, 1.5, 2.5, 4.5, 6],
     }
 };
 
-export default GConfig; 
+export default GConfig;

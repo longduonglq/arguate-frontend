@@ -11,6 +11,7 @@ import msgReducer from './store/reducers/MsgState';
 import topicReducer from './store/reducers/TopicState';
 import tabReducer from './store/reducers/Tabs';
 import generalReducer from './store/reducers/GeneralState';
+import * as generalAction from './store/actions/GeneralState';
 import GWebsocket from "./websocket";
 import rdWebsocket from "./rdWebsocket";
 import sendHttp from "./utility";
@@ -35,7 +36,7 @@ function configureStore(){
     });
     const store = createStore(
         rootReducer,
-        //composerEnhancer()
+        composerEnhancer()
     );
 
     return store;
@@ -47,7 +48,14 @@ const app = (
     </Provider>
 );
 
-GWebsocket.addCallback('user_id_confirmed', () => {
+// set admin or not
+store.dispatch(generalAction.setGeneralState('admin', false));
+if (localStorage.getItem('admin') !== undefined &&
+    localStorage.getItem('admin') === 'true') {
+    store.dispatch(generalAction.setGeneralState('admin', true));
+}
+
+GWebsocket.addCallback('user_id_confirmed', (data) => {
     sendHttp('user_topics', {
         user_id: localStorage.getItem('user_id'),
     }).then(res => {
