@@ -44,7 +44,7 @@ const GConfig = {
         box: 'none',
         fontWeight: 430,
 
-        user_typing_pulse: 760,
+        user_typing_pulse: 1000,
     },
     ws: {
         chatFindingAttempts: isAdmin? adminAttempts : [1, 1, 1, 1.5, 2.5, 4.5, 6],
