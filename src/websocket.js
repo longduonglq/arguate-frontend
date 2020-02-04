@@ -53,6 +53,7 @@ class WebsocketService{
                     id: localStorage.getItem('user_id'),
                     admin: store.getState().general.admin
                 });
+                console.log(store.getState().general.admin);
             }else{
                 let _id = uuid4();
                 localStorage.setItem('user_id', _id);

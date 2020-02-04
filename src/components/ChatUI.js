@@ -130,13 +130,13 @@ class ChatUI extends React.Component {
         function displayOpinion(props){
             if (!props.opinion){
                 return (
-                    <span style={{color:'red', fontWeight: 500}}>Against:
+                    <span style={{color:'red', fontWeight: 500}}>who is against:
                         <span style={{color:'red', fontWeight: 600}}> {props.topic}</span>
                     </span>
                 );
             } else {
                 return (
-                    <span style={{color:'green', fontWeight: 500}}>Support:
+                    <span style={{color:'green', fontWeight: 500}}>who supports:
                         <span style={{color:'green', fontWeight: 600}}> {props.topic}</span>
                     </span>
                 );

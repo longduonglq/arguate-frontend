@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="change welcome msg abit">
+    <list default="true" id="9a0436f0-5a7b-4a0a-9894-ef5956a38ab0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChatUI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatUI.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/websocket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/websocket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/wsConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/wsConfig.js" afterDir="false" />
     </list>
@@ -140,6 +139,8 @@
       <workItem from="1580405121566" duration="2731000" />
       <workItem from="1580426373450" duration="3018000" />
       <workItem from="1580455824786" duration="2817000" />
+      <workItem from="1580773874759" duration="2210000" />
+      <workItem from="1580802386494" duration="1582000" />
     </task>
     <task id="LOCAL-00001" summary="backup before redoing the redux part">
       <created>1579277438779</created>
@@ -351,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580253524365</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="typing pulse">
+      <created>1580529111167</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1580529111167</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,21 +412,23 @@
     <MESSAGE value="change wait times" />
     <MESSAGE value="change description content" />
     <MESSAGE value="change welcome msg abit" />
-    <option name="LAST_COMMIT_MESSAGE" value="change welcome msg abit" />
+    <MESSAGE value="typing pulse" />
+    <option name="LAST_COMMIT_MESSAGE" value="typing pulse" />
   </component>
   <component name="WindowStateProjectService">
     <state x="80" y="190" key="#ESLint" timestamp="1579129396216">
       <screen x="45" y="23" width="1875" height="1057" />
     </state>
     <state x="80" y="190" key="#ESLint/104.1103.1680.1027/45.23.1875.1057@45.23.1875.1057" timestamp="1579129396216" />
-    <state x="860" y="132" key="CommitChangelistDialog2" timestamp="1580457843982">
-      <screen x="41" y="23" width="1879" height="1057" />
+    <state x="859" y="132" key="CommitChangelistDialog2" timestamp="1580807076108">
+      <screen x="39" y="23" width="1881" height="1057" />
     </state>
     <state x="233" y="154" key="CommitChangelistDialog2/104.1103.1680.1027/36.23.1884.1057@36.23.1884.1057" timestamp="1579644412505" />
     <state x="111" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579492821725" />
     <state x="84" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/38.23.1882.1057@38.23.1882.1057" timestamp="1579411615334" />
+    <state x="859" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/39.23.1881.1057@39.23.1881.1057" timestamp="1580807076108" />
     <state x="859" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/40.23.1880.1057@40.23.1880.1057" timestamp="1580150802830" />
-    <state x="860" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/41.23.1879.1057@41.23.1879.1057" timestamp="1580457843982" />
+    <state x="860" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/41.23.1879.1057@41.23.1879.1057" timestamp="1580529110561" />
     <state x="861" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/42.23.1878.1057@42.23.1878.1057" timestamp="1580147536037" />
     <state x="89" y="108" key="CommitChangelistDialog2/104.1103.1680.1027/43.23.1877.1057@43.23.1877.1057" timestamp="1580084660183" />
     <state x="862" y="132" key="CommitChangelistDialog2/104.1103.1680.1027/44.23.1876.1057@44.23.1876.1057" timestamp="1580431437900" />
@@ -514,23 +524,24 @@
       <screen x="37" y="23" width="1883" height="1057" />
     </state>
     <state x="225" y="248" key="RollbackChangesDialog/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579491939938" />
-    <state x="80" y="261" key="Vcs.Push.Dialog.v2" timestamp="1580253529167">
+    <state x="80" y="261" key="Vcs.Push.Dialog.v2" timestamp="1580529133309">
       <screen x="41" y="23" width="1879" height="1057" />
     </state>
     <state x="75" y="261" key="Vcs.Push.Dialog.v2/104.1103.1680.1027/36.23.1884.1057@36.23.1884.1057" timestamp="1579645151758" />
     <state x="76" y="261" key="Vcs.Push.Dialog.v2/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579492837976" />
     <state x="79" y="261" key="Vcs.Push.Dialog.v2/104.1103.1680.1027/40.23.1880.1057@40.23.1880.1057" timestamp="1580150807350" />
-    <state x="80" y="261" key="Vcs.Push.Dialog.v2/104.1103.1680.1027/41.23.1879.1057@41.23.1879.1057" timestamp="1580253529167" />
+    <state x="80" y="261" key="Vcs.Push.Dialog.v2/104.1103.1680.1027/41.23.1879.1057@41.23.1879.1057" timestamp="1580529133309" />
     <state x="81" y="261" key="Vcs.Push.Dialog.v2/104.1103.1680.1027/42.23.1878.1057@42.23.1878.1057" timestamp="1580028882071" />
     <state x="69" y="254" key="Vcs.Push.Dialog.v2/35.23.1645.1027@35.23.1645.1027" timestamp="1579662856365" />
     <state x="70" y="254" key="Vcs.Push.Dialog.v2/36.23.1644.1027@36.23.1644.1027" timestamp="1579677879029" />
     <state x="71" y="254" key="Vcs.Push.Dialog.v2/37.23.1643.1027@37.23.1643.1027" timestamp="1579540760047" />
     <state x="75" y="254" key="Vcs.Push.Dialog.v2/41.23.1639.1027@41.23.1639.1027" timestamp="1579896633051" />
     <state x="77" y="254" key="Vcs.Push.Dialog.v2/43.23.1637.1027@43.23.1637.1027" timestamp="1579739678345" />
-    <state x="557" y="605" key="com.intellij.ide.util.TipDialog" timestamp="1580253452301">
-      <screen x="41" y="23" width="1879" height="1057" />
+    <state x="928" y="527" key="com.intellij.ide.util.TipDialog" timestamp="1580802386186">
+      <screen x="39" y="23" width="1881" height="1057" />
     </state>
     <state x="554" y="605" key="com.intellij.ide.util.TipDialog/104.1103.1680.1027/37.23.1883.1057@37.23.1883.1057" timestamp="1579472019195" />
+    <state x="928" y="527" key="com.intellij.ide.util.TipDialog/104.1103.1680.1027/39.23.1881.1057@39.23.1881.1057" timestamp="1580802386186" />
     <state x="557" y="605" key="com.intellij.ide.util.TipDialog/104.1103.1680.1027/41.23.1879.1057@41.23.1879.1057" timestamp="1580253452301" />
     <state x="558" y="605" key="com.intellij.ide.util.TipDialog/104.1103.1680.1027/42.23.1878.1057@42.23.1878.1057" timestamp="1580133755853" />
     <state x="559" y="605" key="com.intellij.ide.util.TipDialog/104.1103.1680.1027/44.23.1876.1057@44.23.1876.1057" timestamp="1580055315016" />
